@@ -6,7 +6,7 @@ const Footer = (props) => {
   return (
     <>
       <div className="bg-gray-900 footer-uvs justify-center">
-      <div className="container"><div class="row"><div class="col-md-2">
+      <div className="container"><div class="row"><div class="col-md-3">
       <h4> Contact Us</h4>
           <p >
             <i class="fa fa-phone mr-2" aria-hidden="true"></i>{" "}
@@ -44,13 +44,13 @@ const Footer = (props) => {
           <p >Shipping & Refund</p>
           <p >Wholesale Policy</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
           <h4>Subscribe Now</h4>
           <p className="text-gray-400 mt-3">Terms Conditions</p>
-          <div className="row mt-4">
+          <div className="row mt-4 search-uvs">
             <input
               className="form-control col-10"
-              placeholder="Search"
+              placeholder=" "
             />
             <button className="btn btn-primary uvs-btn col-2"> <i class="text-gray-400 mr-2 fa fa-search"></i></button>
           </div>

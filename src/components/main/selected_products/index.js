@@ -70,7 +70,7 @@ const NewArrival = ({selected, getSelectedProducts}) => {
           <h3> <SelectedTitle>Selected New Arrivals</SelectedTitle></h3> 
             <ShopButton>Shop Now</ShopButton>
           </SelectedTitleContainer>
-        </SelectedContainer> </div><div className="col-md-6">
+        </SelectedContainer> </div><div className="col-md-6 uvs-productss">
         <GridContainer>
           <StackGrid
             columnWidth={"32%"}

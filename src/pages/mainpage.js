@@ -18,7 +18,7 @@ const MainPage = () => {
 	return (
 		<MainPageWrapper>
 			<h1 className="text-center my-5">This is a bag.</h1>
-			<ShorticonBar />
+		 	<ShorticonBar /> 
 			<SelectedProducts />
 			<RequestForQuotation />
 			<FeaturedProduct />
