@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div.attrs({
   className:
-    "flex flex-row border-solid border-b border-gray mx-10 h-screen flex-wrap"
+    "row"
 })``;
 
 export const Title = styled.h2.attrs({

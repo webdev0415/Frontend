@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const StyledPanel = styled.div.attrs({
     className: 'container'
-})`
-	border: 1px solid lightgray;
+})` 
 	background-color: white;
 `
 export const IconWrapper = styled.div.attrs({
@@ -27,8 +26,9 @@ export const Desc = styled.span`
 	font-size: .7em;
 `
 export const IconImg = styled.img`
-	width: 32px;
-	height: 32px;
+	width: 42px;
+	height: 42px;
+	margin-right:10px;
 `
 
 export const InnerPanel = styled.div.attrs({

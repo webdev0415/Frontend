@@ -13,8 +13,9 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
     getLatestBlogs()
   }, [])
   return (
-    <>
-      <Title>Latest Blogs</Title>
+    <><div class="container">
+		<h2> 
+      <Title>Latest Blogs</Title></h2> 
       <Container>
         <Slider
           ref={sliderRef}
@@ -28,10 +29,10 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
           })}
         </Slider>
         <ArrowContainer>
-          <Button onClick={() => sliderRef.current.slickPrev()}>{"<"}</Button>
-          <Button onClick={() => sliderRef.current.slickNext()}>{">"}</Button>
+          <Button className="btn btn-default btn-duvs" onClick={() => sliderRef.current.slickPrev()}>{"<"}</Button>
+          <Button className="btn btn-default btn-duvs" onClick={() => sliderRef.current.slickNext()}>{">"}</Button>
         </ArrowContainer>
-      </Container>
+      </Container> </div>
     </>
   );
 };

@@ -19,53 +19,53 @@ import {
 
 const Quotation = (props) => {
   return (
-    <>
-      <Title>Request for Quotation</Title>
-      <ul class="flex border-b-2 border-blue-800 my-5 mx-10">
-        <li class="mr-3 ml-3">
+    <><div className="container"><br/><br/><br/><br/><br/><br/><br/>
+     <h2> <Title>Request for Quotation</Title></h2>
+     <ul className="nav nav-tabs">
+        <li className="nav-item">
           <span className="inline-block py-2 px-3 cursor-pointer text-black">
             Customization Service
           </span>
         </li>
       </ul>
-      <Container>
+      <Container><div className="col-md-12"><div className="row"><div className="col-md-6 uvs-imgbg">  
         <SelectedContainer>
           {/* <img src="https://via.placeholder.com/400" alt="placeholder" /> */}
           <SelectedTitleContainer>
-            <SelectedTitle>A Wholesale Marketplace</SelectedTitle>
+      <h3>      <SelectedTitle>A Wholesale Marketplace</SelectedTitle></h3><br/><br/><br/><br/>
           </SelectedTitleContainer>
           <SelectedDescContainer>
             <DescHeader>5,320</DescHeader>
             <DescBody>Industries</DescBody>
-            <div className="flex-row flex flex-1 justify-between w-full">
-              <div className="flex flex-col flex-1 w-1/2">
+            <div className="row">
+              <div className="col-md-6">
                 <DescHeader>1,60,984</DescHeader>
                 <DescBody>Active Suppliers</DescBody>
               </div>
-              <div className="flex flex-col flex-1 w-1/2">
+              <div className="col-md-6">
                 <DescHeader>{"<"} 12 hrs</DescHeader>
                 <DescBody>Avg. Quotation Duration</DescBody>
               </div>
             </div>
           </SelectedDescContainer>
-        </SelectedContainer>
+        </SelectedContainer></div><div className="col-md-6"> <div className="uvs-form">
         <FormContainer>
-          <FormTitle>One Request, Multiple Quotes</FormTitle>
+         <h3> <FormTitle>One Request, Multiple Quotes</FormTitle></h3>
           <FormDesc>Fill details below</FormDesc>
           <RowContainer>
-            <FormInput type="input" placeholder="What are you looking for..." />
+           <FormInput type="input" className="form-control " placeholder="What are you looking for..." />
+         <br/>   </RowContainer>
+          <RowContainer> <div class="row"> 
+          <div className="col-md-6">    <FormInput type="input"  className="form-control "  placeholder="Quantity" />
+          </div>  <div className="col-md-6"> <select className="form-control">
+              <option>Pieces</option>
+              <option>Pieces</option>
+              <option>Pieces</option>
+            </select></div></div>
           </RowContainer>
-          <RowContainer>
-            <FormInput type="input" placeholder="Quantity" />
-            <select className="flex-1 ml-5 border px-5">
-              <option>Pieces</option>
-              <option>Pieces</option>
-              <option>Pieces</option>
-            </select>
-          </RowContainer>
-          <SubmitButton>Request for quotation</SubmitButton>
-        </FormContainer>
-      </Container>
+          <SubmitButton className="btn btn-uvs-form" >Request for quotation</SubmitButton>
+        </FormContainer></div></div> </div>  </div>
+      </Container>  </div>
     </>
   );
 };

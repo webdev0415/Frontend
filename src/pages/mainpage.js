@@ -17,7 +17,7 @@ import Footer from "../components/main/footer"
 const MainPage = () => {
 	return (
 		<MainPageWrapper>
-			<h1>This is a bag.</h1>
+			<h1 className="text-center my-5">This is a bag.</h1>
 			<ShorticonBar />
 			<SelectedProducts />
 			<RequestForQuotation />
@@ -32,6 +32,6 @@ const MainPage = () => {
 const MainPageWrapper = styled.div.attrs({
   className: ""
 })`
-	background-color: #eee;
+	background-color: #f9f9f9;
 `
 export default MainPage;

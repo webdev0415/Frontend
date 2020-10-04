@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div.attrs({
-  className: "flex flex-row border-solid border-b border-gray mx-10"
+  className: "row"
 })`
   height: 400px;
 `;
@@ -25,15 +25,14 @@ export const SelectedTitle = styled.p.attrs({
 })``;
 
 export const GridContainer = styled.div.attrs({
-  className: "w-full overflow-y-auto mx-2"
+  className: "row"
 })`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display:block; 
  `;
 
 export const ShopButton = styled.button.attrs({
   className:
-    "bg-gray-200 shadow-md hover:bg-white font-bold py-2 px-4 rounded-full"
+    "btn btn-uvs-show-white"
 })``;
 export const ArrivalContainer = styled.div.attrs({
   className: "p-2 flex-column bg-white"

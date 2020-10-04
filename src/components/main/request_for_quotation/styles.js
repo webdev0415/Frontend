@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div.attrs({
-  className: "flex flex-row border-solid border-b border-gray mx-10"
+  className: "flex flex-row mx-10"
 })`
   height: 400px;
 `;
 
 export const Title = styled.h2.attrs({
-  className: "font-bold text-2xl my-5 mx-10"
+  className: "font-bold text-2xl my-3 mx-10"
 })``;
 
 export const SelectedContainer = styled.div.attrs({
   className: "w-full bg-black relative"
 })`
-  height: 400px;
+  height:  auto;
 `;
 
 export const SelectedTitleContainer = styled.div.attrs({
@@ -37,7 +37,7 @@ export const DescBody = styled.p.attrs({
 })``;
 
 export const FormContainer = styled.div.attrs({
-  className: "w-full overflow-y-auto mx-2 border border-gray-300 p-10"
+  className: "w-full overflow-y-auto mx-2  p-10"
 })``;
 
 export const FormTitle = styled.p.attrs({

@@ -9,13 +9,14 @@ const RecentlyView = ({recent, getRecentProducts}) => {
 		getRecentProducts()
 	}, [])
 	return (
-		<>
-		<Title>Revently Viewed</Title>
+		<><div class="container">
+		<h2> 
+		<Title>Revently Viewed</Title></h2> 
 		<Container>
 			{
 				recent && recent.map((el, id)=> <ProductItem key={id} data={el} />)
 			}
-		</Container>
+		</Container> </div>
 		</>
 		)
 }

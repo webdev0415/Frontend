@@ -35,12 +35,14 @@ const FeaturedProducts = ({featured, getFeaturedProducts}) => {
     getFeaturedProducts()
   },[])
   return (
-    <>
-      <Title>Featured Products</Title>
-      <ul class="flex border-b-2 border-blue-800 my-5 mx-10">
+    <><div className="container">
+    <h2> 
+      <Title>Featured Products</Title></h2> 
+      <ul className="nav nav-tabs">
+      
         {menus.map((item, index) => {
           return (
-            <li class="mr-3 ml-3">
+            <li className="nav-item">
               <span
                 class={
                   "inline-block py-2 px-3 cursor-pointer " +
@@ -64,7 +66,7 @@ const FeaturedProducts = ({featured, getFeaturedProducts}) => {
           <ClipLoader size={24} />
           <span className="ml-4">Show More</span>
         </ShowMoreButton>
-      </Container>
+      </Container> </div>
     </>
   );
 };

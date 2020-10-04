@@ -20,10 +20,10 @@ const NewArrival = ({selected, getSelectedProducts}) => {
     getSelectedProducts()
   }, [])
   return (
-    <>
-      <Title>Selected Products</Title>
-      <ul className="flex border-b-2 border-blue-800 my-5 mx-10">
-        <li className="mr-3 ml-3">
+    <><div className="container">
+    <h2>  <Title>Selected Products</Title></h2>
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
           <span
             className={
               "inline-block py-2 px-3 cursor-pointer " +
@@ -36,7 +36,7 @@ const NewArrival = ({selected, getSelectedProducts}) => {
             Trending Item
           </span>
         </li>
-        <li className="mr-3">
+        <li className="nav-item">
           <span
             className={
               "inline-block py-2 px-3 cursor-pointer " +
@@ -49,7 +49,7 @@ const NewArrival = ({selected, getSelectedProducts}) => {
             New Arrivals
           </span>
         </li>
-        <li className="mr-3">
+        <li className="nav-item">
           <span
             className={
               "inline-block py-2 px-3 cursor-pointer " +
@@ -63,20 +63,20 @@ const NewArrival = ({selected, getSelectedProducts}) => {
           </span>
         </li>
       </ul>
-      <Container>
+      <Container><div className="col-md-12"><div className="col-md-12"><div className="row"><div className="col-md-6  uvs-imgbg12">   
         <SelectedContainer>
           {/* <img src="https://via.placeholder.com/400" alt="placeholder" /> */}
           <SelectedTitleContainer>
-            <SelectedTitle>Selected New Arrivals</SelectedTitle>
+          <h3> <SelectedTitle>Selected New Arrivals</SelectedTitle></h3> 
             <ShopButton>Shop Now</ShopButton>
           </SelectedTitleContainer>
-        </SelectedContainer>
+        </SelectedContainer> </div><div className="col-md-6">
         <GridContainer>
           <StackGrid
             columnWidth={"32%"}
             gutterWidth={1}
             gutterHeight={1}
-            style={{ width: "100%", backgroundColor: "#cccccc" }}
+            style={{ width: "100%", backgroundColor: "rgb(249 249 249)" }}
           >
           {
             tabIndex === 0 && selected[0] && selected[0]["trending"].map((el, index)=> (
@@ -113,9 +113,10 @@ const NewArrival = ({selected, getSelectedProducts}) => {
           }
           
             
-          </StackGrid>
-        </GridContainer>
+          </StackGrid>  
+        </GridContainer> </div> </div>  </div>  </div>
       </Container>
+      </div>
     </>
   );
 };
