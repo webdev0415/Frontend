@@ -9,8 +9,8 @@ const ProductItem = ({data}) => {
         <img src={data.image} alt="placeholder" />
       </ImageContainer>
       <ReactStars
-        edit={true}
-        value={data.rate}
+        edit={false}
+        value={data.rating}
         size={24}
         isHalf={true}
         activeColor="#ffd700"

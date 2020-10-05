@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Logo from "../components/main/logo"
+import Topmenu from "../components/main/topmenu"
 import Menubar from "../components/main/menubar"
 import Header from "../components/main/header"
 import CategoryBar from "../components/main/categorybar"
@@ -17,7 +18,7 @@ import Footer from "../components/main/footer"
 const MainPage = () => {
 	return (
 		<MainPageWrapper>
-			<h1 className="text-center my-5">This is a bag.</h1>
+		<Topmenu />
 		 	<ShorticonBar /> 
 			<SelectedProducts />
 			<RequestForQuotation />
