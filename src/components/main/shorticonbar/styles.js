@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledPanel = styled.div.attrs({
-    className: 'col-md-12'
+    className: 'col-md-12 uvs-leftic'
 })` 
 	background-color: white;
 `

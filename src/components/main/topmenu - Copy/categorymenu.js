@@ -26,8 +26,8 @@ const CategoryItemContent = (props) => {
       onMouseLeave={() => setShow(false)}
     >
       <span>{props.title}</span>
-      <span className="float-right">{">"}</span>
-      <MenuItemContent style={{ display: bShow ? "flex" : "none", "position" : "absolute"  }}>
+      <span>{">"}</span>
+      <MenuItemContent style={{ display: bShow ? "flex" : "none" }}>
         <MenuItemContentCols>
           <p className="text-lg font-bold">{props.title}</p>
           {menu_items.map((item) => {

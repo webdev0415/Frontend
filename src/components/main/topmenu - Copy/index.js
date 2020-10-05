@@ -67,18 +67,18 @@ const TopMenu = (props) => {
             onMouseLeave={() => setShowMenu(false)}
             className={
               !showMenu
-                ? "w-64 text-black hover:border-gray-200 hover:bg-gray-200 p-t-uvs-m"
-                : "w-64 text-white bg-blue-800 p-t-uvs-m"
+                ? "w-64 text-black hover:border-gray-200 hover:bg-gray-200"
+                : "w-64 text-white bg-blue-800"
             }
           >
             <i class="fa fa-bars fa-lg mr-2" aria-hidden="true"></i>All
-            Categories 
+            Categories
             <MenuContent style={{ display: showMenu ? "block" : "block" }}>
               {menu_items.map((item) => {
                 return <CategoryItemContent title={item} />;
               })}
-            </MenuContent>  </MenuItem>
-        </div> <div className="col-9"><div className="navbar">
+            </MenuContent> 
+          </MenuItem></div> <div className="col-9"><div className="navbar">
           <MenuItem>Personal Protective Equipments</MenuItem> 
           <MenuItem>Partner Program</MenuItem> 
           <MenuItem>Sell on Dun</MenuItem> 

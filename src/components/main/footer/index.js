@@ -64,7 +64,7 @@ const Footer = (props) => {
             <i class="text-gray-400 mr-2 fa fa-rss" aria-hidden="true"></i>
           </div>
           </div>  </div>  </div>  </div>
-      <Container className="bg-black border-t justify-end">
+      <Container className="bg-black border-t justify-end footer-uvs-row">
       <div className="container"><div class="row"><div class="col-md-12">   <img src="https://img.icons8.com/plasticine/48/000000/google-wallet.png" />
         <img src="https://img.icons8.com/fluent/48/000000/bitcoin.png" />
         <img src="https://img.icons8.com/officel/48/000000/discover.png" />
