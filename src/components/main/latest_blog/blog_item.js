@@ -9,7 +9,7 @@ import {
 
 const BlogItem = ({data}) => {
   return (
-    <ItemContainer><div className="row"><div className="col-md-4 p-0 pl-2">
+    <ItemContainer><div className="row"><div className="col-md-4 p-0 pl-4">
       <ImageContainer>
         <img
           className="w-full h-full object-cover"
