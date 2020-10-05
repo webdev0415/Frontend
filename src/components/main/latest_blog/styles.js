@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ItemContainer = styled.div.attrs({
-  className: "w-full flex flex-row p-2 items-center"
+  className: ""
 })``;
 
 export const ImageContainer = styled.div.attrs({
-  className: "w-40 h-40 bg-gray-500"
+  className: ""
 })``;
 
 export const ContentContainer = styled.div.attrs({

@@ -1,47 +1,32 @@
 import React from "react"
 import styled from "styled-components"
+import ListIcon from '@material-ui/icons/List';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import SecurityIcon from '@material-ui/icons/Security';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import PersonIcon from '@material-ui/icons/Person';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
+import {
+	MenubarWrapper,
+	LeftItems,
+	ALink,
+	RightItems
+} from "./styles"
 
-const menus = [
-	{
-		name: "Select your address",
-		icon: "address",
-		subLinks: [
-			{
-				name: "",
-				url: "",
-			},
-		],
-	},
-	{
-		name: "Help",
-		icon: "help",
-		link: "",
-	},
-	{
-		name: "Guarantee",
-		icon: "guarantee",
-		link: "",
-	},
-	{
-		name: "Payment",
-		icon: "payment",
-		link: "",
-	},
-	{
-		name: "Delivery",
-		icon: "delivery",
-		link: "",
-	},{
-		name: "Register or Sign In",
-		icon: "people",
-		link: "",
-	},
-
-]
 const Menubar = () => {
 	return (
-		<>
-		</>
+		<MenubarWrapper>
+			<LeftItems>
+				<ALink><LocationOnIcon />Select your address</ALink>
+			</LeftItems>
+			<RightItems>
+				<ALink><ListIcon />Help</ALink>
+				<ALink><SecurityIcon />Guarantee</ALink>
+				<ALink><CreditCardIcon />Payment</ALink>
+				<ALink><LocalShippingIcon />Delivery</ALink>
+				<ALink><PersonIcon />Register or Sign In</ALink>
+			</RightItems>
+		</MenubarWrapper>
 		)
 }
 export default Menubar

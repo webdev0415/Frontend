@@ -17,5 +17,5 @@ export const CarouselImgLink = styled.a`
 `
 export const ShopButton = styled.button.attrs({
   className:
-    "bg-gray-200 shadow-md hover:bg-white font-bold py-2 px-4 rounded-full"
+    ""
 })``;
