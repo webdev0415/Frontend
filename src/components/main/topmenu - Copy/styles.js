@@ -31,13 +31,13 @@ export const MenuContent = styled.div.attrs({
 
 export const CategoryMenuItem = styled.div.attrs({
   className:
-    "flex flex-row justify-between py-2 px-3 text-black hover:bg-gray-300 uvs-menu-b"
+    "flex flex-row justify-between py-2 px-3 text-black hover:bg-gray-300"
 })``;
 
 export const MenuItemContent = styled.div.attrs({
-  className: "absolute bg-gray-300 flex flex-row p-10 uvs-menu-b-sub"
+  className: "absolute bg-gray-300 flex flex-row p-10"
 })`
-  left: 17.3rem;
+  left: 16rem;
   top: 0;
 `;
 

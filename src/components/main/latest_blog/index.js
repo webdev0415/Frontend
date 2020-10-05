@@ -16,28 +16,28 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
   {
     "date": "Oct 2, 2020", 
     "id": 0, 
-    "image": "https://placeholder.com/150", 
+    "image": "http://lorempixel.com/400/400", 
     "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
     "title": "Place Holder"
   }, 
   {
     "date": "Oct 2, 2020", 
     "id": 1, 
-    "image": "https://placeholder.com/150", 
+    "image": "http://lorempixel.com/400/400", 
     "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
     "title": "Place Holder"
   },
   {
     "date": "Oct 2, 2020", 
-    "id": 1, 
-    "image": "https://placeholder.com/150", 
+    "id": 2, 
+    "image": "http://lorempixel.com/400/400", 
     "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
     "title": "Place Holder"
   },
   {
     "date": "Oct 2, 2020", 
-    "id": 1, 
-    "image": "https://placeholder.com/150", 
+    "id": 3, 
+    "image": "http://lorempixel.com/400/400", 
     "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
     "title": "Place Holder"
   }
