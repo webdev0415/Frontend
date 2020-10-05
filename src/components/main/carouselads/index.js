@@ -24,10 +24,7 @@ const CarouselAds = () => {
 			<CarouselImgWrapper><CarouselImg src="carousel3.jpg" /></CarouselImgWrapper>
 			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
 
-		</Carousel>	<AdsWrapper>
-			<AdsText></AdsText>
-			<ShopButton />
-		</AdsWrapper>
+		</Carousel>
 		</CarouselWrapper>
 		)
 	
