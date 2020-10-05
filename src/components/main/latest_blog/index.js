@@ -20,7 +20,7 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
         <Slider
           ref={sliderRef}
           className="w-full"
-          slidesToShow={2}
+          slidesToShow={1}
           arrows={false}
           adaptiveHeight={true}
         >
