@@ -15,7 +15,7 @@ import {
 
 const Menubar = () => {
 	return (
-		<MenubarWrapper>
+		<MenubarWrapper> <div className="container"><div className="col-md-12"><div className="row">
 			<LeftItems>
 				<ALink><LocationOnIcon />Select your address</ALink>
 			</LeftItems>
@@ -25,7 +25,7 @@ const Menubar = () => {
 				<ALink><CreditCardIcon />Payment</ALink>
 				<ALink><LocalShippingIcon />Delivery</ALink>
 				<ALink><PersonIcon />Register or Sign In</ALink>
-			</RightItems>
+			</RightItems></div></div> </div> 
 		</MenubarWrapper>
 		)
 }

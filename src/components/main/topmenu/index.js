@@ -61,19 +61,19 @@ const TopMenu = (props) => {
            </ControllerContainer>  </div> </div>  </div>  
       </Container>
       <Container className="container"><div className="col-md-12">
-        <div className="row menu-row-uvs">  <div className="col-3 bg-menu-uvs">
+        <div className="row menu-row-uvs">  <div className="col-3 bg-menu-uvs p-0">
           <MenuItem
             onMouseEnter={() => setShowMenu(true)}
             onMouseLeave={() => setShowMenu(false)}
             className={
               !showMenu
-                ? "w-64 text-black hover:border-gray-200 hover:bg-gray-200 p-t-uvs-m"
-                : "w-64 text-white bg-blue-800 p-t-uvs-m"
+                ? "p-t-uvs-m"
+                : "p-t-uvs-m"
             }
           >
             <i class="fa fa-bars fa-lg mr-2" aria-hidden="true"></i>All
             Categories 
-            <MenuContent style={{ display: showMenu ? "block" : "block" }}>
+            <MenuContent style={{ display: showMenu ? "block" : "none" }}>
               {menu_items.map((item) => {
                 return <CategoryItemContent title={item} />;
               })}

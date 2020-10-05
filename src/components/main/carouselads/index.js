@@ -17,17 +17,17 @@ const CarouselAds = () => {
 
 	return (
 		<CarouselWrapper>
-		<AdsWrapper>
-			<AdsText></AdsText>
-			<ShopButton />
-		</AdsWrapper>
+	
 		<Carousel className="banner" showArrows={false} showStatus={false} showThumbs={false} autoPlay>
 			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
 			<CarouselImgWrapper><CarouselImg src="carousel2.jpg" /></CarouselImgWrapper>
 			<CarouselImgWrapper><CarouselImg src="carousel3.jpg" /></CarouselImgWrapper>
 			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
 
-		</Carousel>
+		</Carousel>	<AdsWrapper>
+			<AdsText></AdsText>
+			<ShopButton />
+		</AdsWrapper>
 		</CarouselWrapper>
 		)
 	
