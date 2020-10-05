@@ -7,8 +7,8 @@ import {
 import Icon from "./icon"
 
 const Panel = () => {
-    return (
-        <StyledPanel>
+    return ( <div className="container">
+        <StyledPanel>  
             <InnerPanel>
                 <IconsWrapper>
                     <Icon type="shipping" title="Ocean and Air Shipping" desc="Free Shipping All Orders" />
@@ -16,8 +16,8 @@ const Panel = () => {
                     <Icon type="support" title="Help Center" desc="24x7 Support System" />
                     <Icon type="trade" title="Trade Assurance" desc="Order Protection" />
                 </IconsWrapper>
-            </InnerPanel>
-        </StyledPanel>
+            </InnerPanel> 
+        </StyledPanel></div>
     )
 }
 

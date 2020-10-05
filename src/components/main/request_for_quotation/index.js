@@ -48,7 +48,7 @@ const Quotation = (props) => {
               </div>
             </div>
           </SelectedDescContainer>
-        </SelectedContainer></div><div className="col-md-6"> <div className="uvs-form">
+        </SelectedContainer></div><div className="col-md-6 padding-left-uvs0"> <div className="uvs-form">
         <FormContainer>
          <h3> <FormTitle>One Request, Multiple Quotes</FormTitle></h3>
           <FormDesc>Fill details below</FormDesc>

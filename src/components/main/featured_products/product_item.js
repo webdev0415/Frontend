@@ -9,7 +9,7 @@ const ProductItem = ({data}) => {
         <img src={data.image} alt="placeholder" />
       </ImageContainer>
       <ReactStars
-        edit={false}
+        edit={true}
         value={data.rate}
         size={24}
         isHalf={true}

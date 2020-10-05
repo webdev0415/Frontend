@@ -13,7 +13,7 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
     getLatestBlogs()
   }, [])
   return (
-    <><div class="container">
+    <><div className="container">
 		<h2> 
       <Title>Latest Blogs</Title></h2> 
       <Container>
@@ -27,11 +27,11 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
           {latest && latest.map((item, index) => {
             return <BlogItem data={item} key={index} />;
           })}
-        </Slider>
+        </Slider> <div className="text-right">
         <ArrowContainer>
           <Button className="btn btn-default btn-duvs" onClick={() => sliderRef.current.slickPrev()}>{"<"}</Button>
           <Button className="btn btn-default btn-duvs" onClick={() => sliderRef.current.slickNext()}>{">"}</Button>
-        </ArrowContainer>
+        </ArrowContainer></div>
       </Container> </div>
     </>
   );

@@ -57,7 +57,7 @@ const FeaturedProducts = ({featured, getFeaturedProducts}) => {
             </li>
           );
         })}
-      </ul>
+      </ul><div className="col-md-12">
       <Container>
       {
         featured[0] && featured[0][menukeys.filter((el, id)=> tabIndex === id)].map((item, i)=><ProductItem key={i} data={item} />)
@@ -66,7 +66,7 @@ const FeaturedProducts = ({featured, getFeaturedProducts}) => {
           <ClipLoader size={24} />
           <span className="ml-4">Show More</span>
         </ShowMoreButton>
-      </Container> </div>
+      </Container> </div></div>
     </>
   );
 };

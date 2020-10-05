@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledPanel = styled.div.attrs({
-    className: 'container'
+    className: 'col-md-12'
 })` 
 	background-color: white;
 `

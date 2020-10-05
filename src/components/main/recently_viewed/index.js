@@ -11,12 +11,12 @@ const RecentlyView = ({recent, getRecentProducts}) => {
 	return (
 		<><div class="container">
 		<h2> 
-		<Title>Revently Viewed</Title></h2> 
+		<Title>Revently Viewed</Title></h2> <div className="col-md-12">
 		<Container>
 			{
 				recent && recent.map((el, id)=> <ProductItem key={id} data={el} />)
 			}
-		</Container> </div>
+		</Container> </div></div>
 		</>
 		)
 }
