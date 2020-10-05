@@ -12,6 +12,36 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
   React.useEffect(()=> {
     getLatestBlogs()
   }, [])
+  const items = [
+  {
+    "date": "Oct 2, 2020", 
+    "id": 0, 
+    "image": "https://placeholder.com/150", 
+    "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
+    "title": "Place Holder"
+  }, 
+  {
+    "date": "Oct 2, 2020", 
+    "id": 1, 
+    "image": "https://placeholder.com/150", 
+    "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
+    "title": "Place Holder"
+  },
+  {
+    "date": "Oct 2, 2020", 
+    "id": 1, 
+    "image": "https://placeholder.com/150", 
+    "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
+    "title": "Place Holder"
+  },
+  {
+    "date": "Oct 2, 2020", 
+    "id": 1, 
+    "image": "https://placeholder.com/150", 
+    "summary": "lorem ipsum dolor sit amet consecutuer adispisicng elit. Anenean commodo ligula eget dolor Anena massa.", 
+    "title": "Place Holder"
+  }
+]
   return (
     <><div className="container">
 		<h2> 
@@ -20,11 +50,11 @@ const LatestBlogs = ({latest, getLatestBlogs}) => {
         <Slider
           ref={sliderRef}
           className="w-full"
-          slidesToShow={1}
+          slidesToShow={2}
           arrows={false}
           adaptiveHeight={true}
         >
-          {latest && latest.map((item, index) => {
+          {items && items.map((item, index) => {
             return <BlogItem data={item} key={index} />;
           })}
         </Slider> <div className="text-right">
