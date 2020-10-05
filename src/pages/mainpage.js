@@ -18,7 +18,8 @@ import Footer from "../components/main/footer"
 const MainPage = () => {
 	return (
 		<MainPageWrapper>
-		<Topmenu />
+			<Topmenu />
+			<CarouselAds />
 		 	<ShorticonBar /> 
 			<SelectedProducts />
 			<RequestForQuotation />
@@ -35,4 +36,5 @@ const MainPageWrapper = styled.div.attrs({
 })`
 	background-color: #f9f9f9;
 `
+
 export default MainPage;

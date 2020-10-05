@@ -21,11 +21,11 @@ const CarouselAds = () => {
 			<AdsText></AdsText>
 			<ShopButton />
 		</AdsWrapper>
-		<Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay>
-			<CarouselImgWrapper><CarouselImg src="https://via.placeholder.com/150" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="https://via.placeholder.com/150" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="https://via.placeholder.com/150" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="https://via.placeholder.com/150" /></CarouselImgWrapper>
+		<Carousel className="banner" showArrows={false} showStatus={false} showThumbs={false} autoPlay>
+			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
+			<CarouselImgWrapper><CarouselImg src="carousel2.jpg" /></CarouselImgWrapper>
+			<CarouselImgWrapper><CarouselImg src="carousel3.jpg" /></CarouselImgWrapper>
+			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
 
 		</Carousel>
 		</CarouselWrapper>
