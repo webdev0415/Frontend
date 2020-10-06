@@ -20,7 +20,10 @@ export const Row = styled.div.attrs({
 export const Col = styled.div.attrs({
 })``;
 export const ColTitle = styled.h4.attrs({
-})``;
+  className: "text-left"
+})`
+font-size:16px;
+`;
 export const ColText = styled.p.attrs({
 })``;
 export const SearchForm = styled.div.attrs({
@@ -53,4 +56,5 @@ export const FooterWrapper = styled.div.attrs({
     	font-size: 12px;
     	color:#bbb9b9;
     }
+    
 `;

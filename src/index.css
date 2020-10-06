@@ -55,6 +55,9 @@ code {
 .bg-blue-700:hover { 
   background-color:#212b46;
 }
+.btn-secondary { 
+  background-color:#212b46;
+}
 .menu-row-uvs {
   font-size:14px;
   border-top: 1px solid #ddd;
@@ -100,9 +103,31 @@ code {
     padding: 10px;
     line-height: 34px;
     cursor:pointer;
-} 
-.MuiSvgIcon-root{margin-right:5px; }
+} p.text-sm {
+  font-size: 12px;
+}.bg-gray-300 img{width:161px;height:161px;}
+.MuiSvgIcon-root{margin-right:5px;     width: 1.5em!important;
+  height: 1.5em!important;}
 .uvs-productss{
   height: 510px;
   overflow-y: auto;
+} .btn.btn-primary .MuiSvgIcon-root {
+  width: 24px!important;
+  height: 24px!important;
 }
+.btn-primary{background: #212b46;} .uvs-menubars .MuiSvgIcon-root {
+  width: 18px!important;
+  height: 18px!important;
+}p .MuiSvgIcon-root {
+  width: 18px!important;
+  height: 18px!important;
+}.mt-4 .MuiSvgIcon-root {
+  width: 18px!important;
+  height: 18px!important;
+}
+.bg-dark {
+  background-color: #343a40!important;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+}.bg-dark .row {float: right;}

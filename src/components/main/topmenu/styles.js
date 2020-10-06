@@ -9,7 +9,7 @@ export const LogoContainer = styled.div.attrs({
 })``;
 
 export const ControllerContainer = styled.div.attrs({
-  className: "flex-1 h-12 flex flex-row justify-end items-center"
+  className: "flex-1 h-12 flex flex-row justify-end items-center my-3"
 })``;
 
 export const BadgeContainer = styled.div.attrs({
@@ -47,10 +47,10 @@ export const MenuItemContentCols = styled.div.attrs({
 export const TopMenuWrapper = styled.div.attrs({
   className: ""
 })`
-  padding: 15px 0;
+  padding:15px 0 0 0;
   font-size:12px;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
-  margin-bottom:0px;
+  margin-bottom:0px;  
 `;
 export const Row = styled.div.attrs({
   className: "row"

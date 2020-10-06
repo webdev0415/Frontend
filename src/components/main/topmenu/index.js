@@ -85,7 +85,7 @@ const TopMenu = () => {
       </Container>
       <Container className="container">
         <Row className="menu-row-uvs">  
-          <Col className="col-3 bg-menu-uvs p-0">
+          <Col className="col-3 btn-secondary p-0">
           <MenuItem
             onMouseEnter={() => setShowMenu(true)}
             onMouseLeave={() => setShowMenu(false)}
