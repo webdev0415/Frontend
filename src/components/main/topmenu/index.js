@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+import ViewListIcon from '@material-ui/icons/ViewList';
+import SearchIcon from '@material-ui/icons/Search';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ChatIcon from '@material-ui/icons/Chat';
 import CategoryItemContent from "./categorymenu"
+// import {getAllCategory} from "../../../store/action"
 import {
   Container,
   LogoContainer,
   ControllerContainer,
-  BadgeContainer,
   MenuItem,
-  MenuContent
+  MenuContent,
+  TopMenuWrapper,
+  Row,
+  Col,
+  SearchInput,
+  SearchBtn,
+  Navbar
 } from "./styles";
 
 const menu_items = [
@@ -25,43 +37,55 @@ const menu_items = [
 ];
 
 
-const TopMenu = (props) => {
+const TopMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  // const dispatch = useDispatch()
+  // React.useEffect(()=>{
+  //   dispatch(getAllCategory())
+  // },[])
+  // const menus = useSelector(state=> state.utils.category)
   return (
-    <div className="header-uvss">
-      <Container className="container uvs-main-head"><div className="col-md-12"><div className="row"><div className="col-md-2">
-        <LogoContainer></LogoContainer>
-        </div> <div className="col-md-10"> <ControllerContainer>
-        <div className="row"><div className="col-md-2">
-            <span>A best place to connect </span><br/>
-            <span>with best sellers</span>
-          </div><div className="col-md-5">
-          <div className="row search-uvs">
-            <input 
-              className="form-control col-10"
-            />
-              <button className="btn btn-primary uvs-btn col-2"> <i class="text-gray-400 mr-2 fa fa-search"></i>
-            </button>
-          </div>  </div><div className="col-md-1"> </div><div className="col-md-1">
-          <i class="fa fa-comments-o fa-3x mr-12" aria-hidden="true"></i>
-          </div><div className="col-md-1">
-            <i class="fa fa-heart-o fa-3x" aria-hidden="true"></i>
-            
-              <span className="badge badge-uvs badge-secondary">13</span>
-            
-              </div><div className="col-md-1">
-            <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-           
-              <span className="badge badge-uvs badge-secondary">0</span>
-            
-              </div><div className="col-md-1">
-            <span className="font-bold">My Cart</span><br/>
-            <span className="text-xs">$ 0.00</span>
-          </div> </div>
-           </ControllerContainer>  </div> </div>  </div>  
+    <TopMenuWrapper>
+      <Container className="container">
+        <Row>
+          <Col className="col-md-2">
+            <LogoContainer></LogoContainer>
+          </Col>
+          <Col className="col-md-10"> 
+            <ControllerContainer>
+            <Row>
+              <Col className="col-md-2">
+                <span>A best place to connect </span><br/>
+                <span>with best sellers</span>
+              </Col>
+              <Col className="col-md-5">
+                <Row className="search-uvs">
+                  <SearchInput />
+                  <SearchBtn> <SearchIcon /></SearchBtn>
+                </Row>  
+              </Col>
+              <Col className="col-md-1"></Col>
+              <Col className="col-md-1"><ChatIcon /></Col>
+              <Col className="col-md-1">
+                <FavoriteBorderIcon />
+                <span className="badge badge-uvs badge-secondary">13</span>
+              </Col>
+              <Col className="col-md-1">
+                <ShoppingCartIcon />
+                <span className="badge badge-uvs badge-secondary">0</span>
+              </Col>
+              <Col className="col-md-1">
+                <span className="font-weight-bold">My Cart</span><br/>
+                <span className="text-xs">$ 0.00</span>
+              </Col> 
+            </Row>
+             </ControllerContainer>   
+          </Col>  
+        </Row>  
       </Container>
-      <Container className="container"><div className="col-md-12">
-        <div className="row menu-row-uvs">  <div className="col-3 bg-menu-uvs p-0">
+      <Container className="container">
+        <Row className="menu-row-uvs">  
+          <Col className="col-3 bg-menu-uvs p-0">
           <MenuItem
             onMouseEnter={() => setShowMenu(true)}
             onMouseLeave={() => setShowMenu(false)}
@@ -71,23 +95,25 @@ const TopMenu = (props) => {
                 : "p-t-uvs-m"
             }
           >
-            <i class="fa fa-bars fa-lg mr-2" aria-hidden="true"></i>All
-            Categories 
+            <ViewListIcon />All Categories 
             <MenuContent style={{ display: showMenu ? "block" : "none" }}>
-              {menu_items.map((item) => {
-                return <CategoryItemContent title={item} />;
+              {menu_items.map((item, index) => {
+                return <CategoryItemContent key={index} title={item} />;
               })}
-            </MenuContent>  </MenuItem>
-        </div> <div className="col-9"><div className="navbar">
-          <MenuItem>Personal Protective Equipments</MenuItem> 
-          <MenuItem>Partner Program</MenuItem> 
-          <MenuItem>Sell on Dun</MenuItem> 
-      
-       
-          <MenuItem>Get the app | English - USD</MenuItem>
-        </div>  </div></div>  </div>
+            </MenuContent>  
+          </MenuItem>
+          </Col> 
+          <Col className="col-9">
+          <Navbar>
+            <MenuItem>Personal Protective Equipments</MenuItem> 
+            <MenuItem>Partner Program</MenuItem> 
+            <MenuItem>Sell on Dun</MenuItem> 
+            <MenuItem>Get the app | English - USD</MenuItem>
+          </Navbar>  
+          </Col>
+        </Row>  
       </Container>  
-    </div>
+    </TopMenuWrapper>
   );
 };
 

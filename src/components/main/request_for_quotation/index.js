@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
+  FullContainer,
   Container,
   Title,
   SelectedContainer,
-  SelectedTitleContainer,
   SelectedDescContainer,
   SelectedTitle,
   FormContainer,
@@ -14,59 +14,76 @@ import {
   FormDesc,
   FormInput,
   RowContainer,
-  SubmitButton
+  SubmitButton,
+  Row,
+  Col2,
+  DescItem,
+  FormSelect
 } from "./styles";
-
-const Quotation = (props) => {
+import {
+  NavTabs,
+  NavItem,
+  NavTxt
+} from "../featured_products/styles"
+const Quotation = () => {
   return (
-    <><div className="container"><br/><br/><br/><br/><br/><br/><br/>
-     <h2> <Title>Request for Quotation</Title></h2>
-     <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <span className="inline-block py-2 px-3 cursor-pointer text-black">
+
+    <FullContainer>
+     <Title>Request for Quotation</Title>
+     <NavTabs>
+        <NavItem>
+          <NavTxt>
             Customization Service
-          </span>
-        </li>
-      </ul>
-      <Container><div className="col-md-12"><div className="row"><div className="col-md-6 uvs-imgbg">  
+          </NavTxt>
+        </NavItem>
+      </NavTabs>
+      <Container>
         <SelectedContainer>
-          {/* <img src="https://via.placeholder.com/400" alt="placeholder" /> */}
-          <SelectedTitleContainer>
-      <h3>      <SelectedTitle>A Wholesale Marketplace</SelectedTitle></h3><br/><br/><br/><br/>
-          </SelectedTitleContainer>
+
+           <SelectedTitle>A Wholesale Marketplace</SelectedTitle>
+
           <SelectedDescContainer>
-            <DescHeader>5,320</DescHeader>
-            <DescBody>Industries</DescBody>
-            <div className="row">
-              <div className="col-md-6">
-                <DescHeader>1,60,984</DescHeader>
-                <DescBody>Active Suppliers</DescBody>
-              </div>
-              <div className="col-md-6">
-                <DescHeader>{"<"} 12 hrs</DescHeader>
+            <DescItem style={{gridArea: 'row1'}}>
+              <DescHeader>5,320</DescHeader>
+              <DescBody>Industries</DescBody>
+            </DescItem>
+            <DescItem style={{gridArea: 'row21'}}>
+              <DescHeader>1,60,984</DescHeader>
+              <DescBody>Active Suppliers</DescBody>
+            </DescItem>
+            <DescItem style={{gridArea: 'row22'}}>
+              <DescHeader>{"<"} 12 hrs</DescHeader>
                 <DescBody>Avg. Quotation Duration</DescBody>
-              </div>
-            </div>
+            </DescItem>
           </SelectedDescContainer>
-        </SelectedContainer></div><div className="col-md-6 padding-left-uvs0"> <div className="uvs-form">
+        </SelectedContainer>
         <FormContainer>
-         <h3> <FormTitle>One Request, Multiple Quotes</FormTitle></h3>
+         <FormTitle>One Request, Multiple Quotes</FormTitle>
           <FormDesc>Fill details below</FormDesc>
           <RowContainer>
-           <FormInput type="input" className="form-control " placeholder="What are you looking for..." />
-         <br/>   </RowContainer>
-          <RowContainer> <div class="row"> 
-          <div className="col-md-6">    <FormInput type="input"  className="form-control "  placeholder="Quantity" />
-          </div>  <div className="col-md-6"> <select className="form-control">
+           <FormInput placeholder="What are you looking for..." />
+            </RowContainer>
+          <RowContainer>
+          <Row> 
+          <Col2>    
+          <FormInput placeholder="Quantity" />
+          </Col2>  
+          <Col2> 
+            <FormSelect className="form-control">
               <option>Pieces</option>
               <option>Pieces</option>
               <option>Pieces</option>
-            </select></div></div>
+            </FormSelect>
+            </Col2>
+            </Row>
           </RowContainer>
-          <SubmitButton className="btn btn-uvs-form" >Request for quotation</SubmitButton>
-        </FormContainer></div></div> </div>  </div>
-      </Container>  </div>
-    </>
+          <SubmitButton>Request for quotation</SubmitButton>
+        </FormContainer>
+
+
+      </Container>  
+      </FullContainer>
+
   );
 };
 

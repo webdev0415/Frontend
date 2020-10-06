@@ -16,7 +16,7 @@ const ProductItem = ({data}) => {
         activeColor="#ffd700"
       />
       <p className="text-sm">{data.title}</p>
-      <p className="text-lg font-bold">
+      <p className="text-lg font-weight-bold">
         ${data.low} - ${data.high}
       </p>
       <p className="text-sm">{data.min} Pieces (Min Order)</p>

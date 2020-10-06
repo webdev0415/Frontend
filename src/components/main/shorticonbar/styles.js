@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 export const StyledPanel = styled.div.attrs({
-    className: 'col-md-12 uvs-leftic'
+    className: 'col-md-12'
 })` 
 	background-color: white;
+	border: 3px solid #efeeee;
+    background-color: white;
 `
 export const IconWrapper = styled.div.attrs({
     className: ''

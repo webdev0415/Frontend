@@ -1,31 +1,44 @@
 import styled from "styled-components";
 
 export const Container = styled.div.attrs({
-  className: "flex flex-row mx-10"
+  className: "mx-10"
 })`
   height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export const Title = styled.h2.attrs({
-  className: "font-bold text-2xl my-3 mx-10"
+  className: "font-weight-bold text-2xl my-3 mx-10"
 })``;
 
 export const SelectedContainer = styled.div.attrs({
-  className: "w-full bg-black relative"
+  className: ""
 })`
   height:  auto;
+  background: url('./11.png') no-repeat;
+  position: relative;
 `;
 
 export const SelectedTitleContainer = styled.div.attrs({
-  className: "absolute top-0 left-0 p-8 w-full"
+  className: "p-8"
 })``;
 
 export const SelectedDescContainer = styled.div.attrs({
-  className: "absolute bottom-0 left-0 p-8 w-full"
-})``;
+  className: "p-4"
+})`
 
-export const SelectedTitle = styled.p.attrs({
-  className: "text-2xl text-white mb-4"
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-areas:
+  'row1 row1'
+  'row21 row22';
+  grid-gap: 15px;
+  `;
+
+export const SelectedTitle = styled.h3.attrs({
+  className: "text-2xl text-white mt-4 ml-3"
 })``;
 
 export const DescHeader = styled.p.attrs({
@@ -33,15 +46,17 @@ export const DescHeader = styled.p.attrs({
 })``;
 
 export const DescBody = styled.p.attrs({
-  className: "text-sl text-gray-600 mb-3"
-})``;
+  className: "text-sl mb-3"
+})`
+  color: lightgray;
+`;
 
 export const FormContainer = styled.div.attrs({
-  className: "w-full overflow-y-auto mx-2  p-10"
+  className: "mx-2  p-10"
 })``;
 
-export const FormTitle = styled.p.attrs({
-  className: "font-bold text-xl text-black"
+export const FormTitle = styled.h3.attrs({
+  className: "font-weight-bold text-xl text-black"
 })``;
 
 export const FormDesc = styled.p.attrs({
@@ -53,10 +68,31 @@ export const RowContainer = styled.div.attrs({
 })``;
 
 export const FormInput = styled.input.attrs({
-  className: "flex-1 h-12 p-4 border"
+  className: "my-2 h-12 p-4 border form-control"
 })``;
-
+export const FormSelect = styled.select.attrs({
+  className: "my-2 h-12 p-4 border form-control"
+})``;
 export const SubmitButton = styled.button.attrs({
   className:
-    "h-12 bg-blue-700 shadow-md hover:bg-blue-800 font-bold py-2 px-4 rounded-full text-white mt-8"
+    " btn h-12 font-weight-bold py-2 px-4 rounded-full text-white mt-8"
+})`
+  margin-top:30px;
+  background:#212b46;
+  color:#fff;
+  padding:20px 30px;
+  font-weight:normal;
+  border-radius: 30px;
+`; 
+export const Row = styled.div.attrs({
+  className: "row"
 })``;
+export const Col2 = styled.div.attrs({
+  className: "col-md-6"
+})``;
+export const FullContainer = styled.div.attrs({
+  className: "container"
+})``;
+export const DescItem = styled.div`
+
+`

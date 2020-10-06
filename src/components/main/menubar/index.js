@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import ListIcon from '@material-ui/icons/List';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SecurityIcon from '@material-ui/icons/Security';

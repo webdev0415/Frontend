@@ -18,32 +18,32 @@ const menu_items = [
   "Home & Garden",
   "Other"
 ];
-const CategoryItemContent = (props) => {
+const CategoryItemContent = ({title}) => {
   const [bShow, setShow] = useState(false);
   return (
     <CategoryMenuItem
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      <span>{props.title}</span>
+      <span>{title}</span>
       <span className="float-right">{">"}</span>
       <MenuItemContent style={{ display: bShow ? "flex" : "none", "position" : "absolute"  }}>
         <MenuItemContentCols>
-          <p className="text-lg font-bold">{props.title}</p>
-          {menu_items.map((item) => {
-            return <span>{item}</span>;
+          <p className="text-lg font-weight-bold">{title}</p>
+          {menu_items.map((item, index) => {
+            return <span key={index}>{item}</span>;
           })}
         </MenuItemContentCols>
         <MenuItemContentCols>
-          <p className="text-lg font-bold">{props.title}</p>
-          {menu_items.map((item) => {
-            return <span>{item}</span>;
+          <p className="text-lg font-weight-bold">{title}</p>
+          {menu_items.map((item, index) => {
+            return <span key={index}>{item}</span>;
           })}
         </MenuItemContentCols>
         <MenuItemContentCols>
-          <p className="text-lg font-bold">{props.title}</p>
-          {menu_items.map((item) => {
-            return <span>{item}</span>;
+          <p className="text-lg font-weight-bold">{title}</p>
+          {menu_items.map((item, index) => {
+            return <span key={index}>{item}</span>;
           })}
         </MenuItemContentCols>
       </MenuItemContent>

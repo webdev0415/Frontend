@@ -1,37 +1,34 @@
 import React, {useRef} from "react"
 import Slider from "infinite-react-carousel";
+import { useDispatch, useSelector } from "react-redux";
+import {getDynamicAds} from "../../../store/action"
 import {
-    LogoWrapper,
     SliderWrapper,
-    ShopButton,
-    DynamicText
+    DynamicContent,
+    AdsImg
 } from "./styles"
 
 const Logo = () => {
-	const texts = [
-	"Work from home essentials1",
-	"Work from home essentials2",
-	"Work from home essentials3",
-	"Work from home essentials4"
-	]
-
+	const dispatch = useDispatch();
 	const sliderRef = useRef(null);
+
+	React.useEffect(()=>{
+		dispatch(getDynamicAds())
+	},[])
+	const dynamicAds = useSelector(state=>state.utils.ads[0]["banner"])
     return (
-        <LogoWrapper>
         	<SliderWrapper>
         	<Slider
 	          ref={sliderRef}
 	          arrows={false}
 	          adaptiveHeight={true}
-	          autoplay 
+	          autoplay
 	        >
-	          {texts && texts.map((item, index) => {
-	            return <DynamicText key={index}>{item}</DynamicText>;
+	          {dynamicAds && dynamicAds.map((item, index) => {
+	            return <DynamicContent key={index}><AdsImg src={item.image}></AdsImg></DynamicContent>;
 	          })}
 	        </Slider>
 	        </SliderWrapper>
-        	<ShopButton>Shop Now</ShopButton>
-        </LogoWrapper>
         )
 }
 export default Logo

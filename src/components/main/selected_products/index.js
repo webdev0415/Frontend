@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StackGrid from "react-stack-grid";
 import ArrivalItem from "./arrival_item";
-import {connect} from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import {
   Container,
   Title,
@@ -9,122 +9,100 @@ import {
   SelectedTitleContainer,
   SelectedTitle,
   GridContainer,
-  ShopButton
+  ShopButton,
+  FullContainer,
+  ImgCol,
+  ProductCol
 } from "./styles";
+import {
+  NavTabs,
+  NavItem,
+  NavTxt
+} from "../featured_products/styles"
 import {getSelectedProducts} from "../../../store/action"
 
-const NewArrival = ({selected, getSelectedProducts}) => {
+const menus = [
+  "Trending Item",
+  "New Arrivals",
+  "Best Sale"
+];
+const menukeys = [
+  "trending",
+  "new_arrivals",
+  "best_sale"
+]
+const NewArrival = () => {
   const [tabIndex, setTabIndex] = useState(0);
-
+  const dispatch = useDispatch()
   React.useEffect(()=>{
-    getSelectedProducts()
+    dispatch(getSelectedProducts())
   }, [])
+  const selected = useSelector(state=> state.products.selected)
   return (
-    <><div className="container">
-    <h2>  <Title>Selected Products</Title></h2>
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <span
-            className={
-              "inline-block py-2 px-3 cursor-pointer " +
-              (tabIndex !== 0
-                ? "text-black hover:border-gray-200 hover:bg-gray-200"
-                : "text-white bg-blue-800")
-            }
-            onClick={() => setTabIndex(0)}
-          >
-            Trending Item
-          </span>
-        </li>
-        <li className="nav-item">
-          <span
-            className={
-              "inline-block py-2 px-3 cursor-pointer " +
-              (tabIndex !== 1
-                ? "text-black hover:border-gray-200 hover:bg-gray-200"
-                : "text-white bg-blue-800")
-            }
-            onClick={() => setTabIndex(1)}
-          >
-            New Arrivals
-          </span>
-        </li>
-        <li className="nav-item">
-          <span
-            className={
-              "inline-block py-2 px-3 cursor-pointer " +
-              (tabIndex !== 2
-                ? "text-black hover:border-gray-200 hover:bg-gray-200"
-                : "text-white bg-blue-800")
-            }
-            onClick={() => setTabIndex(2)}
-          >
-            Best Sale
-          </span>
-        </li>
-      </ul>
-      <Container><div className="col-md-12"><div className="col-md-12"><div className="row"><div className="col-md-6  uvs-imgbg12">   
-        <SelectedContainer>
-          {/* <img src="https://via.placeholder.com/400" alt="placeholder" /> */}
-          <SelectedTitleContainer>
-          <h3> <SelectedTitle>Selected New Arrivals</SelectedTitle></h3> 
-            <ShopButton>Shop Now</ShopButton>
-          </SelectedTitleContainer>
-        </SelectedContainer> </div><div className="col-md-6 uvs-productss">
-        <GridContainer>
-          <StackGrid
-            columnWidth={"32%"}
-            gutterWidth={1}
-            gutterHeight={1}
-            style={{ width: "100%", backgroundColor: "rgb(249 249 249)" }}
-          >
-          {
-            tabIndex === 0 && selected[0] && selected[0]["trending"].map((el, index)=> (
-              <ArrivalItem
-                key={index}
-                title={el.title}
-                description={el.subtitle}
-                srcimg={el.image}
-                height={150}
-                />
-              ))
-          }
-          {
-            tabIndex === 1 && selected[0] && selected[0]["new_arrivals"].map((el, index)=> (
-              <ArrivalItem
-                key={index}
-                title={el.title}
-                description={el.subtitle}
-                srcimg={el.image}
-                height={150}
-                />
-              ))
-          }
-          {
-            tabIndex === 2 && selected[0] && selected[0]["best_sale"].map((el, index)=> (
-              <ArrivalItem
-                key={index}
-                title={el.title}
-                description={el.subtitle}
-                srcimg={el.image}
-                height={150}
-                />
-              ))
-          }
-          
-            
-          </StackGrid>  
-        </GridContainer> </div> </div>  </div>  </div>
+    <FullContainer>
+      <Title>Selected Products</Title>
+      <NavTabs>
+      
+        {menus.map((item, index) => {
+          return (
+            <NavItem key={index}>
+              <NavTxt
+                className={
+                  "inline-block py-2 px-3 cursor-pointer " +
+                  (tabIndex !== index
+                    ? "text-black"
+                    : "text-white")
+                }
+                bgcolor={
+                  (tabIndex !== index
+                    ? "transparent"
+                    : "#212b46")
+                }
+                onClick={() => setTabIndex(index)}
+              >
+                {item}
+              </NavTxt>
+            </NavItem>
+          );
+        })}
+      </NavTabs>
+      <Container>
+
+              <ImgCol className="col-md-6">   
+                <SelectedContainer>
+                  <SelectedTitleContainer>
+                    <SelectedTitle>Selected New Arrivals</SelectedTitle>
+                    <ShopButton>Shop Now</ShopButton>
+                  </SelectedTitleContainer>
+                </SelectedContainer> 
+              </ImgCol>
+              <ProductCol className="col-md-6">
+                <GridContainer>
+                  <StackGrid
+                    columnWidth={"32%"}
+                    gutterWidth={1}
+                    gutterHeight={1}
+                    style={{ width: "100%", backgroundColor: "rgb(249 249 249)" }}
+                  >
+                  {
+                    selected[tabIndex] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].map((item, i)=>
+                      <ArrivalItem
+                            key={i}
+                            title={item.title}
+                            description={item.subtitle}
+                            srcimg={item.image}
+                            height={100}
+                            />
+                    )
+                  }
+                  </StackGrid>  
+                </GridContainer> 
+              </ProductCol>
       </Container>
-      </div>
-    </>
+    </FullContainer>
   );
 };
-const mapStateToProps = state=> ({
-  selected: state.products.selected,
-})
-const mapDispatchToProps = dispatch=>({
-  getSelectedProducts: getSelectedProducts(dispatch)
-})
-export default connect(mapStateToProps, mapDispatchToProps)(NewArrival);
-// export default NewArrival;
+
+export default NewArrival

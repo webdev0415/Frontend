@@ -1,17 +1,11 @@
 import styled from "styled-components"
 
-export const LogoWrapper = styled.div.attrs({
-    className: ''
-})`
-	width: 100%;
-	height: 70px;
-	background-color: #ffad33;
-	display: grid;
-	grid-template-columns: 4fr 1fr;
-
-`
 export const DynamicText = styled.h2`
 	text-align: center;
+`
+export const DynamicContent = styled.div`
+`
+export const AdsImg = styled.img`
 `
 export const ShopButton = styled.button.attrs({
   className:
@@ -29,6 +23,6 @@ export const ShopButton = styled.button.attrs({
 	}
 `;
 export const SliderWrapper = styled.div`
-	width: 80%;
-	padding-top: 10px;
+	width: 100%;
+	
 `

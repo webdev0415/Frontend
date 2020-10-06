@@ -7,7 +7,7 @@ export const Container = styled.div.attrs({
 `;
 
 export const Title = styled.h2.attrs({
-  className: "font-bold text-2xl my-5 mx-10"
+  className: "font-weight-bold text-2xl my-5 mx-10"
 })``;
 
 export const SelectedContainer = styled.div.attrs({
@@ -20,7 +20,7 @@ export const SelectedTitleContainer = styled.div.attrs({
   className: "absolute top-0 left-0 p-8"
 })``;
 
-export const SelectedTitle = styled.p.attrs({
+export const SelectedTitle = styled.h3.attrs({
   className: "text-2xl text-white mb-4"
 })``;
 
@@ -32,8 +32,13 @@ export const GridContainer = styled.div.attrs({
 
 export const ShopButton = styled.button.attrs({
   className:
-    "btn btn-uvs-show-white"
-})``;
+    "btn"
+})`
+  background:#fff;
+  padding:10px 30px;
+  border-radius:40px;
+  color:#212b46;
+`;
 export const ArrivalContainer = styled.div.attrs({
   className: "p-2 flex-column bg-white"
 })`
@@ -48,7 +53,7 @@ export const ImageContainer = styled.div.attrs({
 `;
 
 export const ArrivalTitle = styled.p.attrs({
-  className: "w-full text-center font-bold mt-2"
+  className: "w-full text-center font-weight-bold mt-2"
 })``;
 
 export const Description = styled.p.attrs({
@@ -56,3 +61,17 @@ export const Description = styled.p.attrs({
 })``;
 export const ImageItem = styled.img`
 `
+export const FullContainer = styled.div.attrs({
+  className: "container"
+})``;
+export const ImgCol = styled.div.attrs({
+  className: "col-md-6"
+})`
+  background: url('./12.png') no-repeat;
+`;
+export const ProductCol = styled.div.attrs({
+  className: "col-md-6"
+})`
+  height: 400px;
+  overflow-y: scroll;
+`;

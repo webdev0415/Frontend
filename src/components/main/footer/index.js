@@ -1,78 +1,92 @@
 import React from "react";
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import RssFeedIcon from '@material-ui/icons/RssFeed';
+import SearchIcon from '@material-ui/icons/Search';
+import { 
+  FooterWrapper, 
+  InnerContainer, 
+  Row, 
+  Col, 
+  ColTitle, 
+  ColText, 
+  SearchForm,
+  SearchInput,
+  SearchBtn,
+  FooterContainer
+} from "./styles";
 
-import { Container, ColContainer } from "./styles";
-
-const Footer = (props) => {
+const Footer = () => {
   return (
     <>
-      <div className="bg-gray-900 footer-uvs justify-center">
-      <div className="container"><div class="row"><div class="col-md-3">
-      <h4> Contact Us</h4>
-          <p >
-            <i class="fa fa-phone mr-2" aria-hidden="true"></i>{" "}
-            (+01)123-456-7890
-          </p>
-          <p >
-            <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
-            manager@shop.com
-          </p>
-          <p >
-            <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Location
-            store
-          </p></div>
-          <div class="col-md-2">
-          <h4>Policies & Info</h4>
-          <p >Terms Conditions</p>
-          <p >Policy for Sellers</p>
-          <p >Policy for Buyers</p>
-          <p >Shipping & Refund</p>
-          <p >Wholesale Policy</p>
-          </div>
-          <div class="col-md-2">
-          <h4>Quick Links</h4>
-          <p >Terms Conditions</p>
-          <p >Policy for Sellers</p>
-          <p >Policy for Buyers</p>
-          <p >Shipping & Refund</p>
-          <p >Wholesale Policy</p>
-          </div>
-          <div class="col-md-2">
-          <h4>My account</h4>
-          <p >Terms Conditions</p>
-          <p >Policy for Sellers</p>
-          <p >Policy for Buyers</p>
-          <p >Shipping & Refund</p>
-          <p >Wholesale Policy</p>
-          </div>
-          <div class="col-md-3">
-          <h4>Subscribe Now</h4>
-          <p className="text-gray-400 mt-3">Terms Conditions</p>
-          <div className="row mt-4 search-uvs">
-            <input
-              className="form-control col-10"
-              placeholder=" "
-            />
-            <button className="btn btn-primary uvs-btn col-2"> <i class="text-gray-400 mr-2 fa fa-search"></i></button>
-          </div>
-          <div className="flex flex-row mt-4">
-            <i class="text-gray-400 mr-2 fa fa-facebook" aria-hidden="true"></i>
-            <i class="text-gray-400 mr-2 fa fa-twitter" aria-hidden="true"></i>
-            <i
-              class="text-gray-400 mr-2 fa fa-youtube-play"
-              aria-hidden="true"
-            ></i>
-            <i class="text-gray-400 mr-2 fa fa-rss" aria-hidden="true"></i>
-          </div>
-          </div>  </div>  </div>  </div>
-      <Container className="bg-black border-t justify-end footer-uvs-row">
-      <div className="container"><div class="row"><div class="col-md-12">   <img src="https://img.icons8.com/plasticine/48/000000/google-wallet.png" />
-        <img src="https://img.icons8.com/fluent/48/000000/bitcoin.png" />
-        <img src="https://img.icons8.com/officel/48/000000/discover.png" />
-        <img src="https://img.icons8.com/fluent/48/000000/mastercard.png" />
-        <img src="https://img.icons8.com/fluent/48/000000/paypal.png" />
-        <img src="https://img.icons8.com/color/48/000000/visa.png" />
-        </div>  </div>  </div>   </Container>
-    </>
+      <FooterWrapper>
+        <InnerContainer>
+        <Row>
+          <Col className="col-md-3">
+            <ColTitle> Contact Us</ColTitle>
+            <ColText><PhoneIcon />{" "} (+01)123-456-7890</ColText>
+            <ColText ><EmailIcon />manager@shop.com</ColText>
+            <ColText><LocationOnIcon />Location store</ColText>
+          </Col>
+          <Col className="col-md-2">
+            <ColTitle>Policies & Info</ColTitle>
+            <ColText>Terms Conditions</ColText>
+            <ColText>Policy for Sellers</ColText>
+            <ColText>Policy for Buyers</ColText>
+            <ColText>Shipping & Refund</ColText>
+            <ColText>Wholesale Policy</ColText>
+          </Col>
+          <Col className="col-md-2">
+            <ColTitle>Quick Links</ColTitle>
+            <ColText>Terms Conditions</ColText>
+            <ColText>Policy for Sellers</ColText>
+            <ColText>Policy for Buyers</ColText>
+            <ColText>Shipping & Refund</ColText>
+            <ColText>Wholesale Policy</ColText>
+          </Col>
+            <Col className="col-md-2">
+            <ColTitle>My account</ColTitle>
+            <ColText>Terms Conditions</ColText>
+            <ColText>Policy for Sellers</ColText>
+            <ColText>Policy for Buyers</ColText>
+            <ColText>Shipping & Refund</ColText>
+            <ColText>Wholesale Policy</ColText>
+            </Col>
+            <Col className="col-md-3">
+            <ColTitle>Subscribe Now</ColTitle>
+            <ColText>Terms Conditions</ColText>
+            <SearchForm>
+              <SearchInput />
+              <SearchBtn> <SearchIcon /></SearchBtn>
+            </SearchForm>
+            <div className="flex flex-row mt-4">
+              <FacebookIcon />
+              <TwitterIcon />
+              <YouTubeIcon />
+              <RssFeedIcon />
+            </div>
+            </Col>  
+            </Row>  
+            </InnerContainer>  
+          </FooterWrapper>
+      <FooterContainer>
+      <InnerContainer>
+        <Row>
+
+          <img src="https://img.icons8.com/plasticine/48/000000/google-wallet.png" alt="payment1" />
+          <img src="https://img.icons8.com/fluent/48/000000/bitcoin.png" alt="payment2" />
+          <img src="https://img.icons8.com/officel/48/000000/discover.png" alt="payment3" />
+          <img src="https://img.icons8.com/fluent/48/000000/mastercard.png" alt="payment4" />
+          <img src="https://img.icons8.com/fluent/48/000000/paypal.png" alt="payment5" />
+          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="payment6" />
+        </Row>
+      </InnerContainer>   
+      </FooterContainer>
+      </>
   );
 };
 
