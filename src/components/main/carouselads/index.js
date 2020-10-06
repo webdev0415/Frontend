@@ -1,7 +1,7 @@
 import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {Carousel} from 'react-responsive-carousel'
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import {
 	CarouselWrapper,
 	CarouselImgWrapper,
@@ -10,7 +10,7 @@ import {
 
 
 const CarouselAds = () => {
-	const slider = useSelector(state=>state.utils.ads[0]["slider"])
+	// const slider = useSelector(state=>state.utils.ads[0]["slider"])
 
 	return (
 		<CarouselWrapper>

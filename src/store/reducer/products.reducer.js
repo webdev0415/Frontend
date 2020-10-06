@@ -23,7 +23,7 @@ const productsReducer = (state=initState, action) => {
 	        	recent: action.payload
 	        }
 		default:
-			return {...state}
+			return state
 	}
 }
 

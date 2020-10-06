@@ -12,7 +12,7 @@ const blogsReducer = (state=initState, action) => {
 	        	latest: action.payload
 	        }
 		default:
-			return {...state}
+			return state
 	}
 }
 
