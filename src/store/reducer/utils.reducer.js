@@ -18,7 +18,7 @@ const utilsReducer = (state=initState, action) => {
 	        	cateroty: action.payload
 	        }
 		default:
-			return state
+			return {...state}
 	}
 }
 
