@@ -25,10 +25,10 @@ code {
   padding: 0 2em 0 0 !important;
   width: 100%;
   text-align:right !important;
-} 
+} .form-select{height:50px;}
 .uvs-form {  
   border: 3px solid #efeeee;
-  background-color: white; padding:40px;
+  background-color: white; padding:40px;margin-bottom: 10px;
 }
 .badge-uvs {
         top: 0;
@@ -45,7 +45,7 @@ code {
         border-radius: 50%;
         transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         position: absolute;
-        right: 10px;
+        right: 15px;
 }
 .bg-blue-700 { 
   border: 0;

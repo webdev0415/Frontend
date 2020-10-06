@@ -17,7 +17,7 @@ export const SelectedContainer = styled.div.attrs({
 })`
   height:  auto;
   background: url('./11.png') no-repeat;
-  position: relative;
+  position: relative;padding: 30px 60px 30px 30px;
 `;
 
 export const SelectedTitleContainer = styled.div.attrs({
@@ -52,7 +52,7 @@ export const DescBody = styled.p.attrs({
 `;
 
 export const FormContainer = styled.div.attrs({
-  className: "mx-2  p-10"
+  className: "uvs-form"
 })``;
 
 export const FormTitle = styled.h3.attrs({
@@ -71,18 +71,18 @@ export const FormInput = styled.input.attrs({
   className: "my-2 h-12 p-4 border form-control"
 })``;
 export const FormSelect = styled.select.attrs({
-  className: "my-2 h-12 p-4 border form-control"
+  className: "my-2   border form-control  form-select"
 })``;
 export const SubmitButton = styled.button.attrs({
   className:
-    " btn h-12 font-weight-bold py-2 px-4 rounded-full text-white mt-8"
+    " btn  py-3 px-5 rounded-full text-white mt-8"
 })`
   margin-top:30px;
   background:#212b46;
   color:#fff;
   padding:20px 30px;
   font-weight:normal;
-  border-radius: 30px;
+  border-radius: 30px;margin-bottom:10px;
 `; 
 export const Row = styled.div.attrs({
   className: "row"

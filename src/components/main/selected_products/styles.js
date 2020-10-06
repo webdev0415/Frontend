@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div.attrs({
-  className: "row"
+  className: "row px-3"
 })`
   height: 400px;
+  margin-bottom:50px;
 `;
 
 export const Title = styled.h2.attrs({
@@ -21,7 +22,7 @@ export const SelectedTitleContainer = styled.div.attrs({
 })``;
 
 export const SelectedTitle = styled.h3.attrs({
-  className: "text-2xl text-white mb-4"
+  className: "text-2xl text-white p-4"
 })``;
 
 export const GridContainer = styled.div.attrs({
@@ -37,7 +38,7 @@ export const ShopButton = styled.button.attrs({
   background:#fff;
   padding:10px 30px;
   border-radius:40px;
-  color:#212b46;
+  color:#212b46;margin-left:20px;
 `;
 export const ArrivalContainer = styled.div.attrs({
   className: "p-2 flex-column bg-white"

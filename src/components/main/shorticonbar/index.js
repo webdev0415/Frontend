@@ -7,7 +7,7 @@ import {
 import Icon from "./icon"
 
 const Panel = () => {
-    return ( <div className="container">
+    return ( <div className="container mt-4">
         <StyledPanel>  
             <InnerPanel>
                 <IconsWrapper>
