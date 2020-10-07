@@ -130,4 +130,4 @@ code {
   text-align: center;
   width: 100%;
   position: absolute;
-}.bg-dark .row {float: right;}
+}.bg-dark .row {float: right;}.bg-dark .row img{height:30px;margin:5px;}

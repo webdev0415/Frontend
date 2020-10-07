@@ -9,7 +9,7 @@ export const ImageContainer = styled.div.attrs({
 })``;
 
 export const ContentContainer = styled.div.attrs({
-  className: "flex flex-col px-4 justify-center w-2/3"
+  className: "flex flex-col px-4 justify-center w-2/3 py-1"
 })``;
 
 export const ReadMoreButton = styled.button.attrs({
