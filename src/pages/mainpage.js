@@ -15,7 +15,8 @@ import Footer from "../components/main/footer"
 const MainPage = () => {
 	return (
 		<MainPageWrapper>
-			<Menubar></Menubar>
+			<Logo />
+			<Menubar />
 			<Topmenu />
 			<CarouselAds />
 		 	<ShorticonBar /> 

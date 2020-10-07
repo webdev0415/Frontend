@@ -23,6 +23,7 @@ export const ColTitle = styled.h4.attrs({
   className: "text-left"
 })`
 font-size:16px;
+color: white;
 `;
 export const ColText = styled.p.attrs({
 })``;

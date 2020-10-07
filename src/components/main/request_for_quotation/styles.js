@@ -51,9 +51,12 @@ export const DescBody = styled.p.attrs({
   color: lightgray;
 `;
 
-export const FormContainer = styled.div.attrs({
-  className: "uvs-form"
-})``;
+export const FormContainer = styled.div`
+  border: 1px solid #efeeee;
+  background-color: white; 
+  padding:40px;
+  margin-bottom: 10px;
+`;
 
 export const FormTitle = styled.h3.attrs({
   className: "font-weight-bold text-xl text-black"

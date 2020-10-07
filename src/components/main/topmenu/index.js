@@ -6,6 +6,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ChatIcon from '@material-ui/icons/Chat';
 import CategoryItemContent from "./categorymenu"
+import Badge from '@material-ui/core/Badge';
+import {Row, Col} from "antd"
 // import {getAllCategory} from "../../../store/action"
 import {
   Container,
@@ -14,8 +16,6 @@ import {
   MenuItem,
   MenuContent,
   TopMenuWrapper,
-  Row,
-  Col,
   SearchInput,
   SearchBtn,
   Navbar
@@ -48,33 +48,35 @@ const TopMenu = () => {
     <TopMenuWrapper>
       <Container className="container">
         <Row>
-          <Col className="col-md-2">
+          <Col span={4}>
             <LogoContainer></LogoContainer>
           </Col>
-          <Col className="col-md-10"> 
+          <Col span={20}> 
             <ControllerContainer>
             <Row>
-              <Col className="col-md-2">
+              <Col span={4}>
                 <span>A best place to connect </span><br/>
                 <span>with best sellers</span>
               </Col>
-              <Col className="col-md-5">
+              <Col span={10}>
                 <Row className="search-uvs">
                   <SearchInput />
                   <SearchBtn> <SearchIcon /></SearchBtn>
                 </Row>  
               </Col>
-              <Col className="col-md-1"></Col>
-              <Col className="col-md-1"><ChatIcon /></Col>
-              <Col className="col-md-1">
-                <FavoriteBorderIcon />
-                <span className="badge badge-uvs badge-secondary">13</span>
+              <Col span={2} />
+              <Col span={2}><ChatIcon /></Col>
+              <Col span={2}>
+                <Badge badgeContent={13} color="primary">
+                  <FavoriteBorderIcon />
+                </Badge>
               </Col>
               <Col className="col-md-1">
-                <ShoppingCartIcon />
-                <span className="badge badge-uvs badge-secondary">0</span>
+                <Badge badgeContent={1} color="primary">
+                  <ShoppingCartIcon />
+                </Badge>
               </Col>
-              <Col className="col-md-1">
+              <Col span={2}>
                 <span className="font-weight-bold">My Cart</span><br/>
                 <span className="text-xs">$ 0.00</span>
               </Col> 
@@ -103,13 +105,15 @@ const TopMenu = () => {
             </MenuContent>  
           </MenuItem>
           </Col> 
-          <Col className="col-9">
+          <Col span={10}>
           <Navbar>
             <MenuItem>Personal Protective Equipments</MenuItem> 
             <MenuItem>Partner Program</MenuItem> 
             <MenuItem>Sell on Dun</MenuItem> 
-            <MenuItem>Get the app | English - USD</MenuItem>
-          </Navbar>  
+          </Navbar>
+          </Col>
+          <Col span={8}> 
+          <Navbar style={{float: 'right'}}><MenuItem>Get the app | English - USD</MenuItem></Navbar>
           </Col>
         </Row>  
       </Container>  

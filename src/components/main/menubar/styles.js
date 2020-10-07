@@ -15,7 +15,10 @@ export const LeftItems = styled.div.attrs({
 export const RightItems = styled.div.attrs({
   className: "col-md-9 text-right p-0"
 })``;
-export const ALink = styled.a.attrs({
-  className: ""
-})``;
+export const ALink = styled.a``;
+export const InnerContainer = styled.div.attrs({
+  className: "container row"
+})`
+	margin: 0 auto;
+`;
 

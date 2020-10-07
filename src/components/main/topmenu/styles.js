@@ -4,8 +4,8 @@ export const Container = styled.div.attrs({
   className: "w-full flex flex-row justify-between"
 })``;
 
-export const LogoContainer = styled.div.attrs({
-  className: "w-32 bg-gray-600 h-12"
+export const LogoContainer = styled.img.attrs({
+  className: ""
 })``;
 
 export const ControllerContainer = styled.div.attrs({
@@ -20,13 +20,21 @@ export const BadgeContainer = styled.div.attrs({
 `;
 
 export const MenuItem = styled.div.attrs({
-  className: "relative inline-block py-2 px-3 cursor-pointer z-20 text-black"
-})``;
+  className: "inline-block py-2 cursor-pointer z-20 text-black"
+})`
+  position: relative;
+`;
 
 export const MenuContent = styled.div.attrs({
-  className: "absolute left-0 w-64 bg-white-uvs z-10"
+  className: "left-0 w-64 z-10"
 })`
   top: 2.5rem;
+  height: 470px;
+  margin-top: 13px;
+  width: 277px; 
+  color: #212b46;
+  position: absolute;
+  z-index: 9999999999999;
 `;
 
 export const CategoryMenuItem = styled.div.attrs({
@@ -62,12 +70,15 @@ export const SearchInput = styled.input.attrs({
   className: "form-control col-10"
 })`
   border-radius: 20px 0px 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
 `;
 export const SearchBtn = styled.button.attrs({
   className: "btn btn-primary col-2"
 })`
   border-radius: 0px 20px 20px 0px;
-  border:0; 
+  border:0;
+  outline: none; 
   `;
 export const Navbar = styled.div.attrs({
   className: "navbar"

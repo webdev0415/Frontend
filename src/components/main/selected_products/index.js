@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import StackGrid from "react-stack-grid";
+import { Row, Col } from 'antd';
 import ArrivalItem from "./arrival_item";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -77,28 +78,53 @@ const NewArrival = () => {
                 </SelectedContainer> 
               </ImgCol>
               <ProductCol className="col-md-6">
-                <GridContainer>
-                  <StackGrid
-                    columnWidth={"32%"}
-                    gutterWidth={1}
-                    gutterHeight={1}
-                    style={{ width: "100%", backgroundColor: "rgb(249 249 249)" }}
-                  >
+                <Row gutter={[1, 4]}>
+                  <Col span={8}>
                   {
                     selected[tabIndex] && 
                     selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
-                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].map((item, i)=>
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===0).map((item, i)=>
                       <ArrivalItem
                             key={i}
                             title={item.title}
                             description={item.subtitle}
                             srcimg={item.image}
-                            height={100}
+                            height={150}
                             />
                     )
                   }
-                  </StackGrid>  
-                </GridContainer> 
+                  </Col>
+                  <Col span={8}>
+                  {
+                    selected[tabIndex] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===1).map((item, i)=>
+                      <ArrivalItem
+                            key={i}
+                            title={item.title}
+                            description={item.subtitle}
+                            srcimg={item.image}
+                            height={150}
+                            />
+                    )
+                  }
+                  </Col>
+                  <Col span={8}>
+                  {
+                    selected[tabIndex] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===2).map((item, i)=>
+                      <ArrivalItem
+                            key={i}
+                            title={item.title}
+                            description={item.subtitle}
+                            srcimg={item.image}
+                            height={150}
+                            />
+                    )
+                  }
+                  </Col>
+                  </Row>
               </ProductCol>
       </Container>
     </FullContainer>

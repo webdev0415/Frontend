@@ -51,6 +51,8 @@ export const ImageContainer = styled.div.attrs({
   className: "w-full mt-2 bg-gray-400"
 })`
   height: ${(props) => props.height}px;
+  text-align: center;
+  padding: 10px;
 `;
 
 export const ArrivalTitle = styled.p.attrs({
@@ -58,9 +60,10 @@ export const ArrivalTitle = styled.p.attrs({
 })``;
 
 export const Description = styled.p.attrs({
-  className: "w-full text-center mt-2"
+  className: "w-full text-center font-weight-300"
 })``;
 export const ImageItem = styled.img`
+      height: -webkit-fill-available;
 `
 export const FullContainer = styled.div.attrs({
   className: "container"

@@ -7,11 +7,10 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import RssFeedIcon from '@material-ui/icons/RssFeed';
 import SearchIcon from '@material-ui/icons/Search';
+import {Row, Col} from "antd";
 import { 
   FooterWrapper, 
   InnerContainer, 
-  Row, 
-  Col, 
   ColTitle, 
   ColText, 
   SearchForm,
@@ -26,13 +25,13 @@ const Footer = () => {
       <FooterWrapper>
         <InnerContainer>
         <Row>
-          <Col className="col-md-3">
+          <Col span={6}>
             <ColTitle> Contact Us</ColTitle>
             <ColText><PhoneIcon />{" "} (+01)123-456-7890</ColText>
             <ColText ><EmailIcon />manager@shop.com</ColText>
             <ColText><LocationOnIcon />Location store</ColText>
           </Col>
-          <Col className="col-md-2">
+          <Col span={4}>
             <ColTitle>Policies & Info</ColTitle>
             <ColText>Terms Conditions</ColText>
             <ColText>Policy for Sellers</ColText>
@@ -40,7 +39,7 @@ const Footer = () => {
             <ColText>Shipping & Refund</ColText>
             <ColText>Wholesale Policy</ColText>
           </Col>
-          <Col className="col-md-2">
+          <Col span={4}>
             <ColTitle>Quick Links</ColTitle>
             <ColText>Terms Conditions</ColText>
             <ColText>Policy for Sellers</ColText>
@@ -48,7 +47,7 @@ const Footer = () => {
             <ColText>Shipping & Refund</ColText>
             <ColText>Wholesale Policy</ColText>
           </Col>
-            <Col className="col-md-2">
+            <Col span={4}>
             <ColTitle>My account</ColTitle>
             <ColText>Terms Conditions</ColText>
             <ColText>Policy for Sellers</ColText>
@@ -56,7 +55,7 @@ const Footer = () => {
             <ColText>Shipping & Refund</ColText>
             <ColText>Wholesale Policy</ColText>
             </Col>
-            <Col className="col-md-3">
+            <Col span={6}>
             <ColTitle>Subscribe Now</ColTitle>
             <ColText>Terms Conditions</ColText>
             <SearchForm>
@@ -76,13 +75,15 @@ const Footer = () => {
       <FooterContainer>
       <InnerContainer>
         <Row>
-
+          <Col span={16} />
+          <Col span={8}>
           <img src="https://img.icons8.com/plasticine/48/000000/google-wallet.png" alt="payment1" />
           <img src="https://img.icons8.com/fluent/48/000000/bitcoin.png" alt="payment2" />
           <img src="https://img.icons8.com/officel/48/000000/discover.png" alt="payment3" />
           <img src="https://img.icons8.com/fluent/48/000000/mastercard.png" alt="payment4" />
           <img src="https://img.icons8.com/fluent/48/000000/paypal.png" alt="payment5" />
           <img src="https://img.icons8.com/color/48/000000/visa.png" alt="payment6" />
+          </Col>
         </Row>
       </InnerContainer>   
       </FooterContainer>

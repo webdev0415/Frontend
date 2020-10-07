@@ -6,6 +6,10 @@ import {
 	CarouselWrapper,
 	CarouselImgWrapper,
 	CarouselImg,
+	ShopButton,
+	DescWrapper,
+	Title,
+	SubTitle
 } from "./styles"
 
 
@@ -15,13 +19,39 @@ const CarouselAds = () => {
 	return (
 		<CarouselWrapper>
 	
-		<Carousel className="banner" showArrows={false} showStatus={false} showThumbs={false} autoPlay>
+		<Carousel 
+			className="banner" 
+			showArrows={false} 
+			showStatus={false} 
+			showThumbs={false}
+			infiniteLoop={true} 
+			stopOnHover={false} 
+			autoPlay>
 		
-			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="carousel2.jpg" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="carousel3.jpg" /></CarouselImgWrapper>
-			<CarouselImgWrapper><CarouselImg src="carousel1.jpg" /></CarouselImgWrapper>
-
+			<CarouselImgWrapper>
+				<CarouselImg src="carousel1.jpg" alt="Carousel" />
+				<DescWrapper>
+					<Title>Place Holder</Title>
+					<SubTitle>Holder of Places</SubTitle>
+					<ShopButton>Shop Now</ShopButton>
+				</DescWrapper>
+			</CarouselImgWrapper>
+			<CarouselImgWrapper>
+				<CarouselImg src="carousel2.jpg" alt="Carouse2" />
+				<DescWrapper>
+					<Title>Place Holder</Title>
+					<SubTitle>Holder of Places</SubTitle>
+					<ShopButton>Shop Now</ShopButton>
+				</DescWrapper>
+			</CarouselImgWrapper>
+			<CarouselImgWrapper>
+				<CarouselImg src="carousel3.jpg" alt="Carouse3" />
+				<DescWrapper>
+					<Title>Place Holder</Title>
+					<SubTitle>Holder of Places</SubTitle>
+					<ShopButton>Shop Now</ShopButton>
+				</DescWrapper>
+			</CarouselImgWrapper>
 		</Carousel>
 		</CarouselWrapper>
 		)

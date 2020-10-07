@@ -9,22 +9,25 @@ import {
 	MenubarWrapper,
 	LeftItems,
 	ALink,
-	RightItems
+	RightItems,
+	InnerContainer
 } from "./styles"
 
 const Menubar = () => {
 	return (
-		<MenubarWrapper> <div className="container"><div className="col-md-12"><div className="row">
-			<LeftItems>
-				<ALink><LocationOnIcon />Select your address</ALink>
-			</LeftItems>
-			<RightItems>
-				<ALink><ListIcon />Help</ALink>
-				<ALink><SecurityIcon />Guarantee</ALink>
-				<ALink><CreditCardIcon />Payment</ALink>
-				<ALink><LocalShippingIcon />Delivery</ALink>
-				<ALink><PersonIcon />Register or Sign In</ALink>
-			</RightItems></div></div> </div> 
+		<MenubarWrapper> 
+			<InnerContainer>
+				<LeftItems>
+					<ALink href="#"><LocationOnIcon />Select your address</ALink>
+				</LeftItems>
+				<RightItems>
+					<ALink><ListIcon />Help</ALink>
+					<ALink><SecurityIcon />Guarantee</ALink>
+					<ALink><CreditCardIcon />Payment</ALink>
+					<ALink><LocalShippingIcon />Delivery</ALink>
+					<ALink><PersonIcon />Register or Sign In</ALink>
+				</RightItems>
+			</InnerContainer>
 		</MenubarWrapper>
 		)
 }
