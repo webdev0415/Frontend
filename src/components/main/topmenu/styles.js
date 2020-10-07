@@ -83,3 +83,28 @@ export const SearchBtn = styled.button.attrs({
 export const Navbar = styled.div.attrs({
   className: "navbar"
 })``;
+export const ItemName = styled.span`
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+`;
+export const ItemPrice = styled.span`
+  color: #6394F8;
+  margin-right: 8px;
+`;
+export const ItemQuantity = styled.span`
+   color: #ABB0BE;
+`;
+export const ItemImg = styled.img`
+  float: left;
+  margin-right: 12px;
+  width: 54px;
+  height: 54px; 
+`
+export const MenuHeader = styled.div`
+  padding: 15px;
+  border-bottom: 1px solid #E8E8E8;
+`
+export const ShoppingCartTotal = styled.div`
+  float: right;
+`

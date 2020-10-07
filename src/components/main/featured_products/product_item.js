@@ -1,6 +1,6 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-
+import StarRatings from 'react-star-ratings'
 import { ProductContainer, ImageContainer } from "./styles";
 const ProductItem = ({data}) => {
   return (
@@ -8,12 +8,13 @@ const ProductItem = ({data}) => {
       <ImageContainer>
         <img src={data.image} alt="placeholder" />
       </ImageContainer>
-      <ReactStars
-        edit={false}
-        value={data.rating}
-        size={24}
-        isHalf={true}
-        activeColor="#ffd700"
+      <StarRatings
+        rating={data.rating}
+        starDimension="24px"
+        starSpacing="1px"
+        starRatedColor="#ffd700"
+        starEmptyColor="grey"
+        numberOfStars={5}
       />
       <p className="text-sm">{data.title}</p>
       <p className="text-lg font-weight-bold">

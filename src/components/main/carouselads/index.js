@@ -1,7 +1,8 @@
 import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {Carousel} from 'react-responsive-carousel'
-// import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {getDynamicAds} from "../../../store/action"
 import {
 	CarouselWrapper,
 	CarouselImgWrapper,
@@ -14,8 +15,12 @@ import {
 
 
 const CarouselAds = () => {
-	// const slider = useSelector(state=>state.utils.ads[0]["slider"])
-
+	
+	const dispatch = useDispatch();
+	React.useEffect(()=>{
+		dispatch(getDynamicAds())
+	},[])
+	const slider = useSelector(state=>state.utils.ads)
 	return (
 		<CarouselWrapper>
 	
@@ -27,31 +32,20 @@ const CarouselAds = () => {
 			infiniteLoop={true} 
 			stopOnHover={false} 
 			autoPlay>
-		
-			<CarouselImgWrapper>
-				<CarouselImg src="carousel1.jpg" alt="Carousel" />
-				<DescWrapper>
-					<Title>Place Holder</Title>
-					<SubTitle>Holder of Places</SubTitle>
-					<ShopButton>Shop Now</ShopButton>
-				</DescWrapper>
-			</CarouselImgWrapper>
-			<CarouselImgWrapper>
-				<CarouselImg src="carousel2.jpg" alt="Carouse2" />
-				<DescWrapper>
-					<Title>Place Holder</Title>
-					<SubTitle>Holder of Places</SubTitle>
-					<ShopButton>Shop Now</ShopButton>
-				</DescWrapper>
-			</CarouselImgWrapper>
-			<CarouselImgWrapper>
-				<CarouselImg src="carousel3.jpg" alt="Carouse3" />
-				<DescWrapper>
-					<Title>Place Holder</Title>
-					<SubTitle>Holder of Places</SubTitle>
-					<ShopButton>Shop Now</ShopButton>
-				</DescWrapper>
-			</CarouselImgWrapper>
+			{
+				slider[0] && slider[0]["slider"].length > 0 && slider[0]["slider"].map((el, index)=>
+					<CarouselImgWrapper key={index}>
+						<CarouselImg src={el.image} alt={el.title} />
+						<DescWrapper>
+							<Title>{el.title}</Title>
+							<SubTitle>{el.subtitle}</SubTitle>
+							<ShopButton>Shop Now</ShopButton>
+						</DescWrapper>
+					</CarouselImgWrapper>
+					)
+			}
+			
+			
 		</Carousel>
 		</CarouselWrapper>
 		)

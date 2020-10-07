@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div.attrs({
   className: "row px-3"
 })`
-  height: 400px;
+  height: 432px;
   margin-bottom:50px;
 `;
 
@@ -14,7 +14,7 @@ export const Title = styled.h2.attrs({
 export const SelectedContainer = styled.div.attrs({
   className: "w-full bg-gray-400 relative"
 })`
-  height: 400px;
+  height: 432px;
 `;
 
 export const SelectedTitleContainer = styled.div.attrs({
@@ -38,7 +38,15 @@ export const ShopButton = styled.button.attrs({
   background:#fff;
   padding:10px 30px;
   border-radius:40px;
-  color:#212b46;margin-left:20px;
+  font-weight: 500;
+  color:#212b46;
+  margin-left:20px;
+  transition: all .3s;
+  &:hover {
+    box-shadow: 3px 3px 5px gray;
+    color: white;
+    background-color: #212b46;
+  }
 `;
 export const ArrivalContainer = styled.div.attrs({
   className: "p-2 flex-column bg-white"
@@ -67,7 +75,9 @@ export const ImageItem = styled.img`
 `
 export const FullContainer = styled.div.attrs({
   className: "container"
-})``;
+})`
+
+`;
 export const ImgCol = styled.div.attrs({
   className: "col-md-6"
 })`
@@ -76,6 +86,6 @@ export const ImgCol = styled.div.attrs({
 export const ProductCol = styled.div.attrs({
   className: "col-md-6"
 })`
-  height: 400px;
-  overflow-y: scroll;
+  height: 432px;
+  overflow: hidden;
 `;

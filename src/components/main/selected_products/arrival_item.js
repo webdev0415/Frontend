@@ -4,10 +4,10 @@ import { ArrivalContainer, ArrivalTitle, Description, ImageContainer, ImageItem 
 
 const ArrivalItem = ({title, description, height, backColor, srcimg}) => {
   return (
-  	<Card bordered={false} style={{marginTop: '3px'}}>
+  	<Card bordered={false} style={{ marginTop: '2px', height: `${height}`}}>
   		<ArrivalTitle>{title}</ArrivalTitle>
       <Description>{description}</Description>
-      <ImageContainer height={height}>
+      <ImageContainer height={133}>
         <ImageItem src={srcimg} />
       </ImageContainer>
     </Card>

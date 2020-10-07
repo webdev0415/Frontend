@@ -83,13 +83,13 @@ const NewArrival = () => {
                   {
                     selected[tabIndex] && 
                     selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
-                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===0).map((item, i)=>
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===0 && id<6).map((item, i)=>
                       <ArrivalItem
                             key={i}
                             title={item.title}
                             description={item.subtitle}
                             srcimg={item.image}
-                            height={150}
+                            height={170}
                             />
                     )
                   }
@@ -98,13 +98,13 @@ const NewArrival = () => {
                   {
                     selected[tabIndex] && 
                     selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
-                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===1).map((item, i)=>
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===1 && id<6).map((item, i)=>
                       <ArrivalItem
                             key={i}
                             title={item.title}
                             description={item.subtitle}
                             srcimg={item.image}
-                            height={150}
+                            height={170}
                             />
                     )
                   }
@@ -113,13 +113,13 @@ const NewArrival = () => {
                   {
                     selected[tabIndex] && 
                     selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && 
-                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===2).map((item, i)=>
+                    selected[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].filter((el,id)=>id%3===2 && id<6).map((item, i)=>
                       <ArrivalItem
                             key={i}
                             title={item.title}
                             description={item.subtitle}
                             srcimg={item.image}
-                            height={150}
+                            height={170}
                             />
                     )
                   }

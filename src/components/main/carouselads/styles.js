@@ -37,11 +37,13 @@ export const ShopButton = styled.button.attrs({
 
   background-color: white;
   border-radius: 30px;
-  transition: all .3s;
-  background-color: white;
   margin-left: 0;
   padding: 10px 40px;
-  &:hover {
-    box-shadow: 10px 5px 5px gray;
-  }
-`;
+  color: #212b46;
+  transition: all .3s;
+    &:hover {
+      box-shadow: 3px 3px 5px gray;
+      color: white;
+      background-color: #212b46;
+    }
+`

@@ -41,11 +41,20 @@ const menukeys = [
 
 const FeaturedProducts = () => {
   const [tabIndex, setTabIndex] = useState(0);
+  const [displayIndex, setDisplayIndex] = React.useState(6)
+  const [loading, setLoading] = React.useState(false)
+
   const dispatch = useDispatch()
   React.useEffect(()=> {
     dispatch(getFeaturedProducts())
   },[])
   const featured = useSelector(state => state.products.featured)
+
+  const handleClick = () => {
+    setLoading(true)
+    setDisplayIndex(displayIndex+6)
+    setLoading(false)
+  }
   return (
     <FullContent>
       <Title>Featured Products</Title>
@@ -66,7 +75,10 @@ const FeaturedProducts = () => {
                     ? "transparent"
                     : "#212b46")
                 }
-                onClick={() => setTabIndex(index)}
+                onClick={() => {
+                  setTabIndex(index)
+                  setDisplayIndex(6)
+                }}
               >
                 {item}
               </NavTxt>
@@ -76,13 +88,21 @@ const FeaturedProducts = () => {
       </NavTabs>
       <Container>
       <InnerContainer>
-      {
-        featured[tabIndex] && featured[tabIndex][menukeys.filter((el, id)=> tabIndex === id)] && featured[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].map((item, i)=><ProductItem key={i} data={item} />)
+      { featured.length > 0 &&
+        featured[tabIndex] && 
+        featured[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].length > 0 && 
+        featured[tabIndex][menukeys.filter((el, id)=> tabIndex === id)]
+        .filter((el, id)=> id < displayIndex)
+        .map((item, i)=><ProductItem key={i} data={item} />)
       }
-        <ShowMoreButton>
-          <ClipLoader size={24} />
-          <Span>Show More</Span>
-        </ShowMoreButton>
+        {
+          featured.length > 0 &&
+          displayIndex < featured[tabIndex][menukeys.filter((el, id)=> tabIndex === id)].length && 
+          <ShowMoreButton onClick={handleClick}>
+            <ClipLoader size={24} loading={loading} />
+            {!loading && <label>Show more</label> }
+          </ShowMoreButton>
+        }
       </InnerContainer>
       </Container>
     </FullContent>

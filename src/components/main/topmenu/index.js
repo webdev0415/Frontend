@@ -8,6 +8,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import CategoryItemContent from "./categorymenu"
 import Badge from '@material-ui/core/Badge';
 import {Row, Col} from "antd"
+import { Menu, Dropdown } from 'antd';
 // import {getAllCategory} from "../../../store/action"
 import {
   Container,
@@ -18,7 +19,13 @@ import {
   TopMenuWrapper,
   SearchInput,
   SearchBtn,
-  Navbar
+  Navbar,
+  ItemName,
+  ItemPrice,
+  ItemQuantity,
+  ItemImg,
+  MenuHeader,
+  ShoppingCartTotal
 } from "./styles";
 
 const menu_items = [
@@ -36,16 +43,52 @@ const menu_items = [
   "Other"
 ];
 
-
+const menu = (
+  <Menu style={{width: '300px'}}>
+    <MenuHeader>
+      <Badge badgeContent={1} color="primary">
+        <ShoppingCartIcon />
+       </Badge>
+       <ShoppingCartTotal>
+         <ItemQuantity>Total: </ItemQuantity>
+         <ItemPrice> $2,229.97</ItemPrice>
+       </ShoppingCartTotal>
+    </MenuHeader>
+    <Menu.Item key="0">
+      <ItemImg src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+        <ItemName class="item-name">Sony DSC-RX100M III</ItemName>
+        <ItemPrice class="item-price">$849.99</ItemPrice>
+        <ItemQuantity class="item-quantity">Quantity: 01</ItemQuantity>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <ItemImg src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+        <ItemName class="item-name">KS Automatic Mechanic...</ItemName>
+        <ItemPrice class="item-price">$1,249.99</ItemPrice>
+        <ItemQuantity class="item-quantity">Quantity: 01</ItemQuantity>
+    </Menu.Item>
+    <Menu.Item key="3">
+    <ItemImg src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+        <ItemName class="item-name">Kindle, 6" Glare-Free To...</ItemName>
+        <ItemPrice class="item-price">$129.99</ItemPrice>
+        <ItemQuantity class="item-quantity">Quantity: 01</ItemQuantity>
+    </Menu.Item>
+  </Menu>
+);
 const TopMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showCart, setShowCart] = useState(false)
   // const dispatch = useDispatch()
   // React.useEffect(()=>{
   //   dispatch(getAllCategory())
   // },[])
   // const menus = useSelector(state=> state.utils.category)
+  const handleShoppingCartClick = e => {
+    e.preventDefault()
+    setShowCart(!showCart)
+  }
   return (
     <TopMenuWrapper>
+
       <Container className="container">
         <Row>
           <Col span={4}>
@@ -72,9 +115,11 @@ const TopMenu = () => {
                 </Badge>
               </Col>
               <Col className="col-md-1">
+               <Dropdown overlay={menu} trigger={['click']}>
                 <Badge badgeContent={1} color="primary">
-                  <ShoppingCartIcon />
+                  <ShoppingCartIcon onClick={e => e.preventDefault()}/>
                 </Badge>
+               </Dropdown>
               </Col>
               <Col span={2}>
                 <span className="font-weight-bold">My Cart</span><br/>
@@ -85,6 +130,7 @@ const TopMenu = () => {
           </Col>  
         </Row>  
       </Container>
+
       <Container className="container">
         <Row className="menu-row-uvs">  
           <Col className="col-3 btn-secondary p-0">
