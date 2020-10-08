@@ -11,8 +11,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/product/:detail" component={ProductPage} />
-        <Route path="/product" component={ProductDetailPage} />
+        <Route exact path="/product/:detail" component={ProductDetailPage} />
+        <Route path="/product" component={ProductPage} />
       </Switch>
     </Router>
     </>
