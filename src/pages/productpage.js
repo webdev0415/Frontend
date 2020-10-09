@@ -5,8 +5,7 @@ import Topmenu from "../components/main/topmenu"
 import Menubar from "../components/main/menubar"
 import Breadcrumb from "../components/product/breadcrumb"
 import CarouselProduct from "../components/product/carouselproduct"
-import LayoutPage from "../components/product/layoutpage"
-import RecentlyViewed from "../components/main/recently_viewed" 
+import LayoutPage from "../components/product/layoutpage" 
 import Footer from "../components/main/footer"
 
 const ProductPage = () => {
@@ -17,8 +16,7 @@ const ProductPage = () => {
 			<Topmenu />
 			<Breadcrumb />
 		    <CarouselProduct />
-            <LayoutPage />
-			<RecentlyViewed />
+            <LayoutPage /> 
 			<Footer />			
 		</ProductPageWrapper>
 		)

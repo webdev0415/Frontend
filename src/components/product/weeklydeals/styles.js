@@ -14,8 +14,15 @@ export const ColContainer = styled.div.attrs({
 export const Row = styled.div.attrs({
   className: "row"
 })``;
- 
-export const LayoutPageWrapper = styled.div.attrs({
+export const Title = styled.div.attrs({
+  className: ""
+})`
+font-size:24px;padding:20px 0; 
+& > a {
+  font-size: 14px;color:orange;float:right;text-decoration:none;
+}
+`;
+export const WeeklyDealsWrapper = styled.div.attrs({
   className: ""
 })`
 	background: none;
@@ -28,5 +35,13 @@ export const LayoutPageWrapper = styled.div.attrs({
     	font-size: 12px;
     	color:#bbb9b9;
     }
-    & .ant-col-18 {padding-left:40px;}
+    & .ant-card-bordered {
+      border: 0px solid #f0f0f0;
+       background:none;
+  }
+    & .ant-card-head {
+      padding: 0;}
+      & .ant-card-bordered img{border-radius:10px;
+    }
+
 `;

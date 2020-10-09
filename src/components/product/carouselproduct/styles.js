@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const CarouselWrapper = styled.div`
-	margin: 2rem auto; width:82%;   
-    
-`
+export const CarouselWrapper = styled.div.attrs({
+  className: "Carousel-Wrapper"
+})``;
+ 
 export const AdsWrapper = styled.div`
 
 `

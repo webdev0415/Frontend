@@ -24,7 +24,7 @@ const CarouselProduct = () => {
 	return (
 		<CarouselWrapper>
 	
-		<Carousel  
+		<Carousel 
 			showArrows={false} 
 			showStatus={false} 
 			showThumbs={false}
