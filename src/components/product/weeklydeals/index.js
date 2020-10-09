@@ -11,36 +11,15 @@ const  WeeklyDeals = () => {
   return ( 
       <WeeklyDealsWrapper>
         <InnerContainer>
-        <Row>         <Col span={24}>    <Title>Weekly Deals <a href="">View More</a></Title>
+        <Row>         <Col span={24}>    <Title>Weekly Deals <a href="">Show More</a></Title>
 </Col>
           <Col span={8}>
-          <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-  <Card title="Popular Products"> </Card>
-  </Card> 
+        <img className="leftimg" alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" /> 
           </Col>
-          <Col span={8}>
-          <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-   <Card title="New Arrivals"> </Card>
-  </Card> 
+          <Col span={18}>
+     
           </Col>     
-          <Col span={8}>
-          <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Card title="Fashion & Kids"> </Card>
-
-  </Card> 
-            </Col>         
+         
             </Row>  
             </InnerContainer>  
           </WeeklyDealsWrapper>

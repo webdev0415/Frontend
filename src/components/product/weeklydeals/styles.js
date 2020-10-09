@@ -43,5 +43,5 @@ export const WeeklyDealsWrapper = styled.div.attrs({
       padding: 0;}
       & .ant-card-bordered img{border-radius:10px;
     }
-
+& .leftimg{border-radius:10px;width:100%;}
 `;

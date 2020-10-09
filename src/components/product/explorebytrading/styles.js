@@ -43,5 +43,6 @@ export const ExplorebytradingWrapper = styled.div.attrs({
       padding: 0;}
       & .ant-card-bordered img{border-radius:10px;
     }
+    &  .ant-col-8  { padding: 10px;}
 
 `;
