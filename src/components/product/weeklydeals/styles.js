@@ -33,15 +33,31 @@ export const WeeklyDealsWrapper = styled.div.attrs({
     & p {
     	font-weight:400;
     	font-size: 12px;
-    	color:#bbb9b9;
+     margin-top:8px;
     }
-    & .ant-card-bordered {
+    & .ant-card-bordered {padding:3px;
       border: 0px solid #f0f0f0;
-       background:none;
+      background: #fff; margin:0 3px;
   }
     & .ant-card-head {
       padding: 0;}
       & .ant-card-bordered img{border-radius:10px;
     }
-& .leftimg{border-radius:10px;width:100%;}
+& .leftimg{border-radius:10px;width:120%;}
+`;
+export const Colwraps = styled.div.attrs({
+  className: ""
+})`
+	background: none;
+     margin:0 6px;
+  & .ant-card-head {font-size:14px;font-weight:bold;min-height: auto;
+    padding: 0;}.ant-card-head-title{text-align:left;    padding: 0;}
+    & .ant-card-bordered img{border-radius:0px;margin-right:10px;
+      width:100%;height:120px;}
+     & .ant-btn-round{height: 50px;font-size:18px;background-color:#ff8e0a;
+        width: 50px;} 
+        & .ant-card-body {
+          padding: 5px;
+      }
+      &  
 `;
