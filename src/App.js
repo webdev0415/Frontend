@@ -4,7 +4,6 @@ import MainPage from "./pages/mainpage"
 import ProductPage from "./pages/productpage"
 import ProductDetailPage from "./pages/productdetailpage"
 
-
 function App() {
   return (
     <>
