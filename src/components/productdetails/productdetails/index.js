@@ -17,12 +17,12 @@ const ProductDetails = () => {
           <Col span={12}>
           <ProductGallery />
           </Col>
-          <Col span={8}> 
+          <Col span={10}> 
           <ShortDescription />
           </Col>   
-          <Col span={4}>  <MessageBox />
-          </Col>         
-            </Row>  
+         
+                 
+            </Row>   <MessageBox />
             <Row>      
           <Col span={24}>
             <ProductDescription />

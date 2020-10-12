@@ -2,7 +2,7 @@ import styled from "styled-components"
  export const MessageBoxWrapper = styled.div.attrs({
   className: "text-center"
 })` z-index:99999;width:13%;
-  position: fixed;
+  position: fixed;right:10px;bottom:60px;
 `
 export const MessageBoxtop = styled.div.attrs({
   className: "py-4 px-2"
