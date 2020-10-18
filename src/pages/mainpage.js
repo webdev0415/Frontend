@@ -26,7 +26,6 @@ const MainPage = () => {
 			<RecentlyViewed />
 			<LatestBlog />
 			<Footer />
-			
 		</MainPageWrapper>
 		)
 }

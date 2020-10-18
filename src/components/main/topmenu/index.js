@@ -76,16 +76,16 @@ const menu = (
 );
 const TopMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showCart, setShowCart] = useState(false)
+  // const [showCart, setShowCart] = useState(false)
   // const dispatch = useDispatch()
   // React.useEffect(()=>{
   //   dispatch(getAllCategory())
   // },[])
   // const menus = useSelector(state=> state.utils.category)
-  const handleShoppingCartClick = e => {
-    e.preventDefault()
-    setShowCart(!showCart)
-  }
+  // const handleShoppingCartClick = e => {
+  //   e.preventDefault()
+  //   setShowCart(!showCart)
+  // }
   return (
     <TopMenuWrapper>
 

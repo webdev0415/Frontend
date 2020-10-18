@@ -4,14 +4,15 @@ import MainPage from "./pages/mainpage"
 import ProductPage from "./pages/productpage"
 import ProductDetailPage from "./pages/productdetailpage"
 
+
 function App() {
   return (
     <>
     <Router>
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/product/:detail" component={ProductDetailPage} />
-        <Route path="/product" component={ProductPage} />
+        <Route exact path="/product/detail" component={ProductDetailPage} />
+        <Route exact path="/product" component={ProductPage} />
       </Switch>
     </Router>
     </>

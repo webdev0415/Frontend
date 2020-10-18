@@ -19,21 +19,8 @@ code {
   border-bottom: 2px solid #212b46;
 
 }
-.Carousel-Wrapper {
-  border-radius: 20px;margin: 2rem auto; width:82%;   
-}
-.Carousel-Wrapper .carousel.carousel-slider{
-  border-radius: 20px;margin: 2rem auto; width:82%;   
-}
-.carousel .control-dots {
-  position: absolute;
- bottom: 0;
-  margin: 1em;
-  padding: 0 2em 0 0 !important;
-  width: 100%;
-  
-} .form-select{height:50px;}
- 
+.form-select{height:50px;}
+
 .badge-uvs {
         top: 0;
         display: inline-block;
@@ -66,13 +53,7 @@ code {
   font-size:14px;
   border-top: 1px solid #ddd;
 }
- .site-card-border-less-wrapper ul{list-style: none;line-height:40px;margin:0;padding:0px 20px;}
-.site-card-border-less-wrapper .ant-card {border-radius: 12px;margin-bottom:-20px;padding-bottom:30px;}
-.site-card-border-less-wrapper .ant-card-body {
-  padding: 0 20px;
-}.ant-card-head{
-  padding: 0 40px;border:0;margin-bottom:-10px;
-}
+
 .uvs-menu-b {
   background:#fbfbfb;
 }
@@ -139,5 +120,21 @@ code {
 .ant-card-body {
   padding: 0;
 }
-.card-border{}
-
+.site-card-border-less-wrapper ul{
+  list-style: none;
+  line-height:40px;
+  margin:0;
+  padding:0px 20px;
+}
+.site-card-border-less-wrapper .ant-card {
+  border-radius: 12px;
+  margin-bottom:-20px;
+  padding-bottom:30px;
+}
+.site-card-border-less-wrapper .ant-card-body {
+  padding: 0 20px;
+}.ant-card-head{
+  padding: 0 40px;
+  border:0;
+  margin-bottom:-10px;
+}

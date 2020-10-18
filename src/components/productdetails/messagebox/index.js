@@ -11,9 +11,15 @@ import {  MessageBoxWrapper,
 const MessageBox = () => {
   return ( 
       <MessageBoxWrapper>
-       <MessageBoxtop> <ChatIcon />       <Para>For product pricing, customization, or other enquiries; </Para>      <ReadMoreButton>Leave Message</ReadMoreButton> </MessageBoxtop>
-       <MessageBoxbottom>  <AddCartButton>Add to Cart</AddCartButton> </MessageBoxbottom>
-          </MessageBoxWrapper>
+       <MessageBoxtop> 
+         <ChatIcon />       
+         <Para>For product pricing, customization, or other enquiries; </Para>      
+         <ReadMoreButton>Leave Message</ReadMoreButton> 
+       </MessageBoxtop>
+       <MessageBoxbottom>  
+         <AddCartButton>Add to Cart</AddCartButton> 
+       </MessageBoxbottom>
+      </MessageBoxWrapper>
       
   );
 };

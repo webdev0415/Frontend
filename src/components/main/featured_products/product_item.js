@@ -1,5 +1,4 @@
 import React from "react";
-import ReactStars from "react-rating-stars-component";
 import StarRatings from 'react-star-ratings'
 import { ProductContainer, ImageContainer } from "./styles";
 const ProductItem = ({data}) => {

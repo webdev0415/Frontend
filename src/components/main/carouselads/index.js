@@ -1,8 +1,7 @@
 import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import {Carousel} from 'react-responsive-carousel'
-import { useSelector, useDispatch } from "react-redux";
-import {getDynamicAds} from "../../../store/action"
+import { useSelector } from "react-redux";
 import {
 	CarouselWrapper,
 	CarouselImgWrapper,
@@ -15,12 +14,8 @@ import {
 
 
 const CarouselAds = () => {
-	
-	const dispatch = useDispatch();
-	React.useEffect(()=>{
-		dispatch(getDynamicAds())
-	},[])
 	const slider = useSelector(state=>state.utils.ads)
+
 	return (
 		<CarouselWrapper>
 	

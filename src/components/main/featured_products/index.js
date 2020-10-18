@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import {getFeaturedProducts} from "../../../store/action"
 import ProductItem from "./product_item";
-import {Row, Col} from "antd"
 import { 
   Container,
   Title, 
   ShowMoreButton,
   FullContent,
-  Span,
   NavTabs,
   NavItem,
   NavTxt,

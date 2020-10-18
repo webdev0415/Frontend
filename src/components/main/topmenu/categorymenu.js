@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {Link} from "react-router-dom"
 import {
 	CategoryMenuItem,
 	MenuItemContent,
@@ -31,19 +32,19 @@ const CategoryItemContent = ({title}) => {
         <MenuItemContentCols>
           <p className="text-lg font-weight-bold">{title}</p>
           {menu_items.map((item, index) => {
-            return <span key={index}>{item}</span>;
+            return <Link to="/product" key={index}><span>{item}</span></Link>;
           })}
         </MenuItemContentCols>
         <MenuItemContentCols>
           <p className="text-lg font-weight-bold">{title}</p>
           {menu_items.map((item, index) => {
-            return <span key={index}>{item}</span>;
+            return <Link to="/product" key={index}><span>{item}</span></Link>;;
           })}
         </MenuItemContentCols>
         <MenuItemContentCols>
           <p className="text-lg font-weight-bold">{title}</p>
           {menu_items.map((item, index) => {
-            return <span key={index}>{item}</span>;
+            return <Link to="/product" key={index}><span>{item}</span></Link>;;
           })}
         </MenuItemContentCols>
       </MenuItemContent>

@@ -2,7 +2,15 @@ import styled from "styled-components"
 
 export const CarouselWrapper = styled.div.attrs({
   className: "Carousel-Wrapper"
-})``;
+})`
+  border-radius: 20px;
+  margin: 2rem auto; 
+  width:82%;
+  & .carousel-slider {
+    border-radius: 20px;
+  }
+
+`;
  
 export const AdsWrapper = styled.div`
 
@@ -19,15 +27,17 @@ export const CarouselImg = styled.img`
 `
 export const DescWrapper = styled.div`
 	position: absolute;
-	left: 30%;
-	top: 40%;
+	left: 2rem;
+	top: 2rem;
 	color: white;
 	background-color: transparent;
 	text-align: left;
 `
 export const Title = styled.h1`
+  color: white;
 `
 export const SubTitle = styled.h3`
+  color: white;
 `
 export const CarouselImgLink = styled.a`
 `

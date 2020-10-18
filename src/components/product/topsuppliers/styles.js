@@ -33,15 +33,15 @@ font-size:12px;color:#5ea81f;line-height:18px;margin-bottom:20px;
 export const TopSuppliersWrapper = styled.div.attrs({
   className: ""
 })`
-	background: none;
+  background: none;
     
     & > h4 {
-    	font-size: 16px;
+      font-size: 16px;
     }
     & p {
-    	font-weight:400;
-    	font-size: 12px;
-    	color:#bbb9b9;
+      font-weight:400;
+      font-size: 12px;
+      color:#bbb9b9;
     }
     & .ant-card-bordered {
       border: 0px solid #f0f0f0;
@@ -51,7 +51,7 @@ export const TopSuppliersWrapper = styled.div.attrs({
 export const Colwraps = styled.div.attrs({
   className: ""
 })`
-	background: none;
+  background: none;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);padding:15px;border-radius:10px;      margin: 5px;
   & .ant-card-head {font-size:12px;
     padding: 0;}.ant-card-head-title{text-align:center;}

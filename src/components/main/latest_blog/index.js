@@ -5,7 +5,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import {getLatestBlogs} from "../../../store/action"
 import BlogItem from "./blog_item";
-import { FullContainer, Container, Title, ArrowContainer, Button} from "./styles";
+import { FullContainer, Container, Title, ArrowContainer} from "./styles";
 
 
 const LatestBlogs = (  ) => {

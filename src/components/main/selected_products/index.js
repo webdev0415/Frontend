@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import StackGrid from "react-stack-grid";
 import { Row, Col } from 'antd';
 import ArrivalItem from "./arrival_item";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +8,6 @@ import {
   SelectedContainer,
   SelectedTitleContainer,
   SelectedTitle,
-  GridContainer,
   ShopButton,
   FullContainer,
   ImgCol,
@@ -69,7 +67,7 @@ const NewArrival = () => {
       </NavTabs>
       <Container>
 
-              <ImgCol className="col-md-6">   
+              <ImgCol>   
                 <SelectedContainer>
                   <SelectedTitleContainer>
                     <SelectedTitle>Selected New Arrivals</SelectedTitle>

@@ -29,7 +29,7 @@ const RecentlyView = () => {
 	}
 	return (
 		<FullContainer>
-		<Title>Revently Viewed</Title> <div className="col-md-12">
+		<Title>Recently Viewed</Title> <div className="col-md-12">
 		<Container>
 			{
 				recent && recent.filter((el, id)=>id < displayIndex).map((el, id)=> <ProductItem key={id} data={el} />)

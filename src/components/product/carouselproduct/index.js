@@ -32,13 +32,12 @@ const CarouselProduct = () => {
 			stopOnHover={false} 
 			autoPlay>
 			{
-				slider[0] && slider[0]["slider"].length > 0 && slider[0]["slider"].map((el, index)=>
+				slider[0] && slider[0]["product_slider"].length > 0 && slider[0]["product_slider"].map((el, index)=>
 					<CarouselImgWrapper key={index}>
 						<CarouselImg src={el.image} alt={el.title} />
 						<DescWrapper>
 							<Title>{el.title}</Title>
 							<SubTitle>{el.subtitle}</SubTitle>
-							<ShopButton>Shop Now</ShopButton>
 						</DescWrapper>
 					</CarouselImgWrapper>
 					)

@@ -2,6 +2,14 @@ import styled from "styled-components"
 
 export const CarouselWrapper = styled.div`
 	margin: 0rem auto;
+  & .control-dots {
+    position: absolute;
+  top: 0;
+  margin: 1em;
+  padding: 0 2em 0 0 !important;
+  width: 100%;
+  text-align:right !important;
+  }
 `
 export const AdsWrapper = styled.div`
 

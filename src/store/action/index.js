@@ -69,7 +69,7 @@ export const getLatestBlogs = () => {
 export const getDynamicAds = () => {
     return dispatch => {
         axios
-        .get(`${SERVER_PORT}/api/ads/dynamic`)
+        .get(`${SERVER_PORT}/api/banners/dynamic`)
         .then( res => {
             res.status === 200
             ? dispatch({type: actionTypes.DYNAMIC_ADS, payload:res.data})
@@ -95,4 +95,88 @@ export const getAllCategory = () => {
         });
     }
     
+}
+export const getTopSuppliers = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/suppliers/top`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.TOP_SUPPLY, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
+}
+export const getWeeklyDeals = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/deals/weekly`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.WEEKLY_DEALS, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
+}
+export const getTrending = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/explore/trending`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.TRENDING, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
+}
+export const getTopRanking = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/products/top`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.TOP_RANKING, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
+}
+export const getJustForYou = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/products/personal?owner=1`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.JUST_FOR_YOU, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
+}
+export const getProductDetail = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/products/single?id=1337`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.PRODUCT_DETAIL, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
 }

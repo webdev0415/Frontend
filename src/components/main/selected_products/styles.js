@@ -81,7 +81,7 @@ export const FullContainer = styled.div.attrs({
 export const ImgCol = styled.div.attrs({
   className: "col-md-6"
 })`
-  background: url('./12.png') no-repeat;
+  background: url('https://i.imgur.com/Dr7mEZz.png') no-repeat;
 `;
 export const ProductCol = styled.div.attrs({
   className: "col-md-6"

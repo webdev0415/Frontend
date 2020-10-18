@@ -17,7 +17,7 @@ export const ShopButton = styled.button.attrs({
 	top: 15px
 	color: #212b46;
 	background-color: white;
-	margin: 15px 50px;
+	margin: 2px 50px;
 	border-radius: 30px;
 	transition: all .3s;
 	background-color: white;

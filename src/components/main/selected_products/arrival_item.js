@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from 'antd';
-import { ArrivalContainer, ArrivalTitle, Description, ImageContainer, ImageItem } from "./styles";
+import { ArrivalTitle, Description, ImageContainer, ImageItem } from "./styles";
 
 const ArrivalItem = ({title, description, height, backColor, srcimg}) => {
   return (

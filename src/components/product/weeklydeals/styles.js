@@ -25,14 +25,14 @@ font-size:24px;padding:20px 0;
 export const WeeklyDealsWrapper = styled.div.attrs({
   className: ""
 })`
-	background: none;
+  background: none;
     
     & > h4 {
-    	font-size: 16px;
+      font-size: 16px;
     }
     & p {
-    	font-weight:400;
-    	font-size: 12px;
+      font-weight:400;
+      font-size: 12px;
      margin-top:8px;
     }
     & .ant-card-bordered {padding:3px;
@@ -48,7 +48,7 @@ export const WeeklyDealsWrapper = styled.div.attrs({
 export const Colwraps = styled.div.attrs({
   className: ""
 })`
-	background: none;
+  background: none;
      margin:0 6px;
   & .ant-card-head {font-size:14px;font-weight:bold;min-height: auto;
     padding: 0;}.ant-card-head-title{text-align:left;    padding: 0;}

@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+# http://icarus.codes:8000/api/banners/dynamic
+# http://icarus.codes:8000/api/explore/trending
+# http://icarus.codes:8000/api/suppliers/top
+# http://icarus.codes:8000/api/deals/weekly
+# http://icarus.codes:8000/api/products/top
+# http://icarus.codes:8000/api/products/personal?owner=1

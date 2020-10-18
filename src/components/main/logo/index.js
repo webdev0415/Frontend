@@ -1,5 +1,4 @@
-import React, {useRef} from "react"
-import Slider from "infinite-react-carousel";
+import React from "react"
 import {Carousel} from 'react-responsive-carousel'
 import { useDispatch, useSelector } from "react-redux";
 import {getDynamicAds} from "../../../store/action"
@@ -12,7 +11,6 @@ import {
 
 const Logo = () => {
 	const dispatch = useDispatch();
-	const sliderRef = useRef(null);
 
 	React.useEffect(()=>{
 		dispatch(getDynamicAds())

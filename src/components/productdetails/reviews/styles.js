@@ -10,8 +10,8 @@ export const Rates = styled.div.attrs({
 })`
 float: right;
     position: absolute;
-    right: 0; 
-    top: -12px;
+    right: -7px; 
+    top: -7px;
     & .ant-rate-star{font-size:12px;}
 ` 
 export const AddReviewsButton = styled.div.attrs({

@@ -16,7 +16,7 @@ export const SelectedContainer = styled.div.attrs({
   className: ""
 })`
   height:  auto;
-  background: url('./11.png') no-repeat;
+  background: url('https://i.imgur.com/WecOZL2.png') no-repeat;
   position: relative;padding: 30px 60px 30px 30px;
 `;
 
