@@ -138,3 +138,6 @@ code {
   border:0;
   margin-bottom:-10px;
 }
+.rcw-launcher,.rcw-conversation-container .rcw-header{background: #c30fd3!important;}
+.rcw-conversation-container .rcw-title {
+  color: #fff;}

@@ -16,6 +16,8 @@
     "jwt-decode": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-chat-elements": "^10.11.0",
+    "react-chat-widget": "^3.0.5",
     "react-dom": "^16.13.1",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.1",
