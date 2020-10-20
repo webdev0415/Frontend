@@ -1,5 +1,10 @@
-import React from "react";
-import { Form, Input, Button, Checkbox } from 'antd'; 
+import React, { useState } from 'react';
+import {
+  Form,
+  Input, 
+  Button, 
+} from 'antd';
+//import isEmail from "validator/lib/isEmail";
 import logo from "./logo.PNG"
 import {Title,
   Para,
@@ -27,36 +32,59 @@ const SignUp = () => {
         <Input   placeholder="Username" />
       </Form.Item>
       <Form.Item
-        name="useremail"
-        label=" Email"
-        rules={[{ required: true, message: 'Please input your Email!' }]}
+        name="email"
+        label="User E-mail"
+        rules={[
+          {
+            type: 'email',
+            message: 'The input is not valid E-mail!',
+          },
+          {
+            required: true,
+            message: 'Please input your E-mail!',
+          },
+        ]}
       >
-        <Input   placeholder="Email" />
+        <Input />
       </Form.Item>
+
       <Form.Item
         name="password"
         label="Password"
-
-        rules={[{ required: true, message: 'Please input your Password!' }]}
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+          },
+        ]}
+        hasFeedback
       >
-        <Input
-         
-          type="password"
-          placeholder="Password"
-        />
+        <Input.Password />
       </Form.Item>
+
       <Form.Item
-        name="confirmpassword"
+        name="confirm"
         label="Confirm Password"
-
-        rules={[{ required: true, message: 'Please input your Confirm Password!' }]}
+        dependencies={['password']}
+        hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please confirm your password!',
+          },
+          ({ getFieldValue }) => ({
+            validator(rule, value) {
+              if (!value || getFieldValue('password') === value) {
+                return Promise.resolve();
+              }
+              return Promise.reject('The two passwords that you entered do not match!');
+            },
+          }),
+        ]}
       >
-        <Input
-         
-          type="password"
-          placeholder="Confirm Password"
-        />
+        <Input.Password />
       </Form.Item>
+
      
 
       <Form.Item>
