@@ -20,24 +20,35 @@ const SigIn = () => {
     >
   <Title>Login
 </Title>
-      <Form.Item
-        name="useremail"
-        label=" Email"
-        rules={[{ required: true, message: 'Please input your Email!' }]}
+<Form.Item
+        name="email"
+        label="User E-mail"
+        rules={[
+          {
+            type: 'email',
+            message: 'The input is not valid E-mail!',
+          },
+          {
+            required: true,
+            message: 'Please input your E-mail!',
+          },
+        ]}
       >
-        <Input   placeholder="Email" />
+        <Input />
       </Form.Item>
+
       <Form.Item
         name="password"
         label="Password"
-
-        rules={[{ required: true, message: 'Please input your Password!' }]}
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+          },
+        ]}
+        hasFeedback
       >
-        <Input
-         
-          type="password"
-          placeholder="Password"
-        />
+        <Input.Password />
       </Form.Item>
   
       <Form.Item>
