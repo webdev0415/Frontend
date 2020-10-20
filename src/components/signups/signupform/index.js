@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import {
   Form,
   Input, 
+  Select, 
   Button, 
+  AutoComplete,
 } from 'antd';
 //import isEmail from "validator/lib/isEmail";
 import logo from "./logo.PNG"
@@ -10,8 +12,16 @@ import {Title,
   Para,
   SignUpWrapper
 } from "./styles";
-
-
+const { Option } = Select;
+const AutoCompleteOption = AutoComplete.Option;
+const prefixSelector = (
+  <Form.Item name="prefix" noStyle>
+    <Select style={{ width: 70 }}>
+      <Option value="86">+86</Option>
+      <Option value="87">+87</Option>
+    </Select>
+  </Form.Item>
+);
 const SignUp = () => {
   return (
 
@@ -47,7 +57,13 @@ const SignUp = () => {
       >
         <Input />
       </Form.Item>
-
+      <Form.Item
+        name="phone"
+        label="Phone Number"
+        rules={[{ required: true, message: 'Please input your phone number!' }]}
+      >
+        <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+      </Form.Item>
       <Form.Item
         name="password"
         label="Password"
