@@ -13,6 +13,16 @@ import {Title,
 
 
 const SignUp = () => {
+  const [signupParam, setSignupParam] = React.useState({})
+  const handleChange = e => {
+    setSignupParam({
+      ...signupParam,
+      [e.target.id]: e.target.value
+    })
+  }
+  const onFinish = () => {
+    console.log("hahah", signupParam)
+  }
   return (
 
     <SignUpWrapper> 
@@ -21,7 +31,7 @@ const SignUp = () => {
       name="normal_login"
       className="login-form"
       initialValues={{ remember: true }}
-      //onFinish={onFinish}
+      onFinish={onFinish}
     > <Title>Create Account
     </Title>
       <Form.Item
@@ -29,7 +39,7 @@ const SignUp = () => {
         label="User Name"
         rules={[{ required: true, message: 'Please input your Username!' }]}
       >
-        <Input   placeholder="Username" />
+        <Input placeholder="Username" id="username" onChange={handleChange} />
       </Form.Item>
       <Form.Item
         name="email"
@@ -45,7 +55,7 @@ const SignUp = () => {
           },
         ]}
       >
-        <Input />
+        <Input placeholder="E-mail" id="email" onChange={handleChange} />
       </Form.Item>
 
       <Form.Item
@@ -59,7 +69,7 @@ const SignUp = () => {
         ]}
         hasFeedback
       >
-        <Input.Password />
+        <Input.Password placeholder="Password" id="password" onChange={handleChange} />
       </Form.Item>
 
       <Form.Item
@@ -84,7 +94,18 @@ const SignUp = () => {
       >
         <Input.Password />
       </Form.Item>
-
+      <Form.Item
+        name="phone"
+        label="Phone"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your Phone Number'
+          },
+          ]}
+      >
+      <Input.Password placeholder="Phone Number" id="phone" onChange={handleChange} />
+      </Form.Item>
      
 
       <Form.Item>
