@@ -85,6 +85,7 @@ const SignUp = () => {
         ]}
         hasFeedback
       >
+        
         <Input.Password placeholder="Password" id="password" onChange={handleChange} />
       </Form.Item>
 
