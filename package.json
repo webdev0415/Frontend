@@ -12,13 +12,16 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "infinite-react-carousel": "^1.2.11",
+    "is-empty": "^1.2.0",
     "jquery": "^3.5.1",
     "jwt-decode": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-chat-elements": "^10.11.0",
     "react-chat-widget": "^3.0.5",
     "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.7",
+    "react-intl": "^5.8.6",
+    "react-phone-input-2": "^2.13.8",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.1",
     "react-responsive-carousel": "^3.2.10",
@@ -32,7 +35,9 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "utils": "^0.3.1",
+    "validator": "^13.1.17"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import {useSelector, useDispatch} from "react-redux";
+import {signupUser} from "../../../store/action"
+import {message} from 'antd'
+import { useHistory } from "react-router-dom";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import {Link} from "react-router-dom"
+
 import {
   Form,
-  Input, 
-  Select, 
-  Button, 
-  AutoComplete,
+  Input,
+  Button,
 } from 'antd';
 //import isEmail from "validator/lib/isEmail";
 import logo from "./logo.PNG"
@@ -12,18 +18,18 @@ import {Title,
   Para,
   SignUpWrapper
 } from "./styles";
-const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
-const prefixSelector = (
-  <Form.Item name="prefix" noStyle>
-    <Select style={{ width: 70 }}>
-      <Option value="86">+86</Option>
-      <Option value="87">+87</Option>
-    </Select>
-  </Form.Item>
-);
+
+
+
 const SignUp = () => {
   const [signupParam, setSignupParam] = React.useState({})
+  const [phone, setPhone] = React.useState()
+  const dispatch = useDispatch();
+  const history = useHistory()
+  // const msg = useSelector(state=>state.auth.message)
+  // React.useEffect(()=>{
+  //   message.success(msg)
+  // }, [msg])
   const handleChange = e => {
     setSignupParam({
       ...signupParam,
@@ -31,7 +37,11 @@ const SignUp = () => {
     })
   }
   const onFinish = () => {
-    console.log("hahah", signupParam)
+    const postData = {
+      ...signupParam,
+      phone
+    }
+    dispatch(signupUser(signupParam, history))
   }
   return (
 
@@ -53,7 +63,7 @@ const SignUp = () => {
       </Form.Item>
       <Form.Item
         name="email"
-        label="User E-mail"
+        label="E-mail"
         rules={[
           {
             type: 'email',
@@ -67,13 +77,7 @@ const SignUp = () => {
       >
         <Input placeholder="E-mail" id="email" onChange={handleChange} />
       </Form.Item>
-      <Form.Item
-        name="phone"
-        label="Phone Number"
-        rules={[{ required: true, message: 'Please input your phone number!' }]}
-      >
-        <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
-      </Form.Item>
+
       <Form.Item
         name="password"
         label="Password"
@@ -85,7 +89,6 @@ const SignUp = () => {
         ]}
         hasFeedback
       >
-        
         <Input.Password placeholder="Password" id="password" onChange={handleChange} />
       </Form.Item>
 
@@ -111,27 +114,32 @@ const SignUp = () => {
       >
         <Input.Password />
       </Form.Item>
-      <Form.Item
+
+
+      <Form.Item 
         name="phone"
-        label="Phone"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your Phone Number'
-          },
-          ]}
+        label="Phone Number"
+        rules={[{ required: true, message: 'Please input your phone number!' }]}
       >
-      <Input.Password placeholder="Phone Number" id="phone" onChange={handleChange} />
+        <PhoneInput
+          inputClass="phoneinput"
+          country={'us'}
+          inputProps={{
+            name: 'phone',
+            required: true,
+          }}
+          value={phone}
+          onChange={phone=>setPhone(phone)}
+        />
       </Form.Item>
      
-
       <Form.Item>
         <Button type="primary" htmlType="submit" className="login-form-button">
         Sign Up
         </Button> <Para>
         By creating an account, you agree to our    <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
       </Para>
-      <hr/> Already have an account? <a href="">Sign In</a>
+      <hr/> Already have an account? <Link to="/login">Sign In</Link>
       </Form.Item>
     </Form>
  

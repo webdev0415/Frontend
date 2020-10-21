@@ -1,6 +1,9 @@
 import axios from "axios"
 import * as actionTypes from "./action_types";
 import {SERVER_PORT} from "../config"
+import {message} from "antd"
+import setAuthToken from "../../utils/SetAuthToken"
+import jwt_decode from "jwt-decode"
 
 export const getSelectedProducts = () => {
     return dispatch => {
@@ -179,4 +182,86 @@ export const getProductDetail = () => {
             console.log(err)
         });
     } 
+}
+export const signupUser = (postData, history) => {
+    
+    return dispatch => {
+        axios
+        .post(`${SERVER_PORT}/api/account/create`, postData)
+        .then( res => {
+            if (res.status === 201) {
+                message.success("You're registered successfully.")
+                history.push('/auth/check-email');
+            } else {
+                message.error(res.statusText);
+            }
+        })
+        .catch(err => {
+            message.error(err.message);
+        });
+    }
+}
+export const loginUser = loginData => {
+    return dispatch => {
+        axios
+        .post(`${SERVER_PORT}/api/auth/token_create`, loginData)
+        .then(res=>res.json())
+        .then(res=>{
+            if (!res.access_token) return false;
+            saveToken(res)
+            setAuthToken(res);
+            const decoded = jwt_decode(res)
+            dispatch(setCurrentUser(decoded))
+        })
+        .catch(err=>{
+            message.error(err.message)
+        })
+    }
+}
+export const setCurrentUser = decoded=> {
+    return dispatch => {
+            dispatch({
+                type: actionTypes.SET_CURRENT_USER,
+                payload: decoded
+            })
+    }
+    
+}
+const saveToken = token => {
+  localStorage.setItem("AUTH_TOKEN", JSON.stringify(token));
+};
+export const confirmEmail = (token, history) => {
+    axios
+    .get(`${SERVER_PORT}/api/account/confirm/${token}`)
+    .then(res=> {
+        if (res.status === 200 && res.data.reply==="success") {
+            message.success("Email is confirmed. Please login.")
+        } else if (res.status !== 200 && res.data.reply === "user not verified") {
+            message.error("User not verified")
+        } else {
+            message.success(res.json())
+        }
+        
+        history.push("/login")
+    })
+    .catch(err=>{
+        history.push("/login")
+        message.error(err.message)
+        message.error('Please try again.');
+        
+    })
+}
+export const checkEmail = () => {
+    axios
+    .get(`${SERVER_PORT}/api/account/email_check`)
+    .then(res=>{
+        if (res.data.reply === "valid") {
+            message.success("Valid Email")
+        } else if (res.data.reply == "invalid") {
+            message.error("invalid Email")
+        }
+    })
+    .catch(err=>{
+        message.error(err.message)
+    })
 }

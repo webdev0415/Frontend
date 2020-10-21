@@ -1,5 +1,4 @@
-import React from "react" 
-import 'react-chat-widget/lib/styles.css';
+import React from "react"
 import styled from "styled-components"
 import Logo from "../components/main/logo"
 import Topmenu from "../components/main/topmenu"
@@ -13,10 +12,10 @@ import RecentlyViewed from "../components/main/recently_viewed"
 import LatestBlog from "../components/main/latest_blog"
 import Footer from "../components/main/footer"
 import LiveChat from "../components/main/livechat"
+
 const MainPage = () => {
 	return (
 		<MainPageWrapper>
-		
 			<Logo />
 			<Menubar />
 			<Topmenu />

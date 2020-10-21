@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Checkbox } from 'antd'; 
+import {Link} from "react-router-dom"
 import logo from "./logo.PNG"
 import {Title,
   Para,
@@ -8,6 +9,18 @@ import {Title,
 
 
 const SigIn = () => {
+
+  const [loginParam, setLoginParam] = React.useState({})
+  const handleChange = e => {
+    setLoginParam({
+      ...loginParam,
+      [e.target.id]: e.target.value
+    })
+  }
+  const onFinish = () => {
+
+    console.log(loginParam)
+  }
   return (
 
     <SigInWrapper> 
@@ -16,7 +29,7 @@ const SigIn = () => {
       name="normal_login"
       className="login-form"
       initialValues={{ remember: true }}
-      //onFinish={onFinish}
+      onFinish={onFinish}
     >
   <Title>Login
 </Title>
@@ -34,7 +47,7 @@ const SigIn = () => {
           },
         ]}
       >
-        <Input />
+        <Input placeholder="E-mail" id="email" onChange={handleChange} />
       </Form.Item>
 
       <Form.Item
@@ -48,7 +61,7 @@ const SigIn = () => {
         ]}
         hasFeedback
       >
-        <Input.Password />
+        <Input.Password placeholder="Password" id="password" onChange={handleChange} />
       </Form.Item>
   
       <Form.Item>
@@ -66,7 +79,7 @@ const SigIn = () => {
         Sign In
         </Button> <Para>
         By continuing, you agree to our    <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
-       <br/><hr/>New User <a href="">Sign Up</a></Para>
+       <br/><hr/>New User <Link to="/signup">Sign Up</Link></Para>
       </Form.Item>
     </Form>
  

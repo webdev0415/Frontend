@@ -138,18 +138,24 @@ code {
   border:0;
   margin-bottom:-10px;
 }
-.rcw-launcher,.rcw-conversation-container .rcw-header{background: #c30fd3!important;}
+.rcw-launcher,.rcw-conversation-container .rcw-header{
+  background: #c30fd3!important;
+}
+.phoneinput {
+  width: 100% !important;
+}
 .rcw-conversation-container .rcw-title {
-  color: #fff;}
-  #components-form-demo-normal-login .login-form {
-    max-width: 300px;
+  color: #fff;
+}
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
   }
-  #components-form-demo-normal-login .login-form-forgot {
-    float: right;
-  }
-  #components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
-    float: left;
-  }
-  #components-form-demo-normal-login .login-form-button {
-    width: 100%;
-  }
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+} 
