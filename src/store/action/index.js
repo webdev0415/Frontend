@@ -184,17 +184,18 @@ export const getProductDetail = () => {
     } 
 }
 export const signupUser = (postData, history) => {
-    
+    console.log("postData", postData)
     return dispatch => {
         axios
         .post(`${SERVER_PORT}/api/account/create`, postData)
         .then( res => {
-            if (res.status === 201) {
-                message.success("You're registered successfully.")
-                history.push('/auth/check-email');
-            } else {
-                message.error(res.statusText);
-            }
+            message.success("You're registered successfully.")
+            history.push('/auth/check-email');
+            // if (res.status === 200 || res.statusText === "OK") {
+                
+            // } else {
+            //     message.error(res.statusText);
+            // }
         })
         .catch(err => {
             message.error(err.message);
@@ -202,15 +203,18 @@ export const signupUser = (postData, history) => {
     }
 }
 export const loginUser = loginData => {
+    const formData = new URLSearchParams();
+    formData.append("username", loginData.email);
+    formData.append("password", loginData.password);
     return dispatch => {
         axios
-        .post(`${SERVER_PORT}/api/auth/token_create`, loginData)
-        .then(res=>res.json())
+        .post(`${SERVER_PORT}/api/auth/token_create`, formData)
         .then(res=>{
-            if (!res.access_token) return false;
-            saveToken(res)
-            setAuthToken(res);
-            const decoded = jwt_decode(res)
+            console.log("res", res)
+            if (!res.data[0].access_token) return false;
+            saveToken(res.data[0].access_token)
+            setAuthToken(res.data[0].access_token);
+            const decoded = jwt_decode(res.data[0].access_token)
             dispatch(setCurrentUser(decoded))
         })
         .catch(err=>{
@@ -230,27 +234,7 @@ export const setCurrentUser = decoded=> {
 const saveToken = token => {
   localStorage.setItem("AUTH_TOKEN", JSON.stringify(token));
 };
-export const confirmEmail = (token, history) => {
-    axios
-    .get(`${SERVER_PORT}/api/account/confirm/${token}`)
-    .then(res=> {
-        if (res.status === 200 && res.data.reply==="success") {
-            message.success("Email is confirmed. Please login.")
-        } else if (res.status !== 200 && res.data.reply === "user not verified") {
-            message.error("User not verified")
-        } else {
-            message.success(res.json())
-        }
-        
-        history.push("/login")
-    })
-    .catch(err=>{
-        history.push("/login")
-        message.error(err.message)
-        message.error('Please try again.');
-        
-    })
-}
+
 export const checkEmail = () => {
     axios
     .get(`${SERVER_PORT}/api/account/email_check`)

@@ -41,7 +41,7 @@ const SignUp = () => {
       ...signupParam,
       phone
     }
-    dispatch(signupUser(signupParam, history))
+    dispatch(signupUser(postData, history))
   }
   return (
 

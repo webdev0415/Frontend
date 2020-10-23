@@ -2,6 +2,8 @@ import React from "react";
 import { Form, Input, Button, Checkbox } from 'antd'; 
 import {Link} from "react-router-dom"
 import logo from "./logo.PNG"
+import {useSelector, useDispatch} from "react-redux"
+import {loginUser} from "../../../store/action"
 import {Title,
   Para,
   SigInWrapper
@@ -11,6 +13,7 @@ import {Title,
 const SigIn = () => {
 
   const [loginParam, setLoginParam] = React.useState({})
+  const dispatch = useDispatch()
   const handleChange = e => {
     setLoginParam({
       ...loginParam,
@@ -18,8 +21,7 @@ const SigIn = () => {
     })
   }
   const onFinish = () => {
-
-    console.log(loginParam)
+    dispatch(loginUser(loginParam))
   }
   return (
 

@@ -1,32 +1,23 @@
-/**
- *
- * CheckEmailView
- *
- */
-
 import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components/macro';
 import { Card, Typography } from 'antd';
-import {checkEmail} from "../store/action"
+// import {checkEmail} from "../store/action"
 
 const CheckEmailView = () => {
 
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { Title } = Typography;
-  React.useEffect(()=>{
-    dispatch(checkEmail)
-  }, [])
+  // React.useEffect(()=>{
+  //   dispatch(checkEmail)
+  // }, [])
   return (
     <>
-      <Helmet>
-        <title>CheckEmailView</title>
-        <meta name="description" content="Description of CheckEmailView" />
-      </Helmet>
+      
       <Div>
-        <Card style={{ width: 500, height: 300 }}>
+        <Card style={{ width: 500, height: 300, padding: 30 }}>
           <div
             style={{
               textAlign: 'center',

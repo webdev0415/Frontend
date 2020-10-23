@@ -5,6 +5,7 @@ import SecurityIcon from '@material-ui/icons/Security';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 import PersonIcon from '@material-ui/icons/Person';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
+import {Link} from "react-router-dom"
 import {
 	MenubarWrapper,
 	LeftItems,
@@ -25,7 +26,7 @@ const Menubar = () => {
 					<ALink><SecurityIcon />Guarantee</ALink>
 					<ALink><CreditCardIcon />Payment</ALink>
 					<ALink><LocalShippingIcon />Delivery</ALink>
-					<ALink><PersonIcon />Register or Sign In</ALink>
+					<Link to="/login"><PersonIcon />Register or Sign In</Link>
 				</RightItems>
 			</InnerContainer>
 		</MenubarWrapper>

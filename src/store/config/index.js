@@ -3,7 +3,7 @@ const funcS = () => {
 		case 'production':
 			return ""
 		case 'development':
-			return "http://127.0.0.1:8000"
+			return "http://icarus.codes:8000/"
 		default:
 			return ''
 	}
