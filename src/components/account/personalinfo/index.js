@@ -1,13 +1,15 @@
-import React from "react" 
+import React, { useState } from 'react';
+import { Modal} from 'antd';
 import { Row, Col } from 'antd';
-import { Form, Input } from 'antd';
+import { Form, Input } from 'antd'; 
+import { Button } from 'antd';
 
 import {SettingOutlined,EditOutlined
   } from '@ant-design/icons'; 
 
 import {
 	PersonalInfoWrapper,
-	Title 
+  Title 
 } from "./styles"
 
 const layout = {
@@ -18,6 +20,8 @@ const layout = {
 	wrapperCol: { offset: 8, span: 16 },
   };
 const PersonalInfo = () => {
+  const [visible, setVisible] = useState(false);
+
 	return (
 		<PersonalInfoWrapper>
 		<Row>  <Col span={23}>  <Title>Personal Information</Title> </Col> <Col span={1}> <SettingOutlined /></Col>
@@ -34,9 +38,9 @@ const PersonalInfo = () => {
       </Form.Item>
 	  <Form.Item
         label="Address"
-		name="username"  
+		name="username"  onClick={() => setVisible(true)}  
       >
-      <Input   addonAfter={<EditOutlined/>} />
+      <Input addonAfter={<EditOutlined/>} />
       </Form.Item>
 
      
@@ -52,7 +56,28 @@ const PersonalInfo = () => {
     
     </Col>
   </Row>
-		</PersonalInfoWrapper>
+  
+	
+      <Modal 
+        centered
+        visible={visible}
+        onOk={() => setVisible(false)}
+        onCancel={() => setVisible(false)} 
+      >  
+         <Title level={2}> Change Primary Address</Title>
+        <Form.Item  >
+          <Input />
+        </Form.Item> <br/>
+     
+        <Title level={2}> Add New Address</Title>
+        <Form.Item  >
+          <Input />
+        </Form.Item>    
+        <Button>Save Changes</Button>
+
+      </Modal>
+      </PersonalInfoWrapper>
+     
 		)
 	
 }
