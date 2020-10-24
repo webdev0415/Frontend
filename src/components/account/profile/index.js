@@ -1,6 +1,6 @@
 import React from "react" 
 import { Row, Col } from 'antd';
-import {SettingOutlined, CheckOutlined
+import {SettingOutlined 
   } from '@ant-design/icons';
 import { Avatar } from 'antd';  
 

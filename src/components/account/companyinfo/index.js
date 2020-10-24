@@ -1,7 +1,7 @@
 import React from "react" 
 import { Row, Col } from 'antd';
 import { Form, Input } from 'antd';
-import {SettingOutlined
+import {SettingOutlined,EditOutlined
   } from '@ant-design/icons'; 
 
 import {
@@ -30,31 +30,31 @@ const CompanyInfo = () => {
         label="Comapny Name"
         name="username" 
       >
-        <Input />
+         <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
 	  <Form.Item
         label="Website"
         name="username" 
       >
-        <Input />
+         <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
 	  <Form.Item
         label="Business Type"
         name="username" 
       >
-        <Input />
+         <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
 	  <Form.Item
         label="Registered Address"
         name="username" 
       >
-        <Input />
+         <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
 	  <Form.Item
         label="Stock Ticker"
         name="username" 
       >
-        <Input />
+         <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
  
  

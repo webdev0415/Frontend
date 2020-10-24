@@ -30,19 +30,21 @@ const PersonalInfo = () => {
         label="Email"
         name="username" 
       >
-        <Input />
+    <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
 	  <Form.Item
         label="Address"
 		name="username"  
       >
-      <Input  prefix={<EditOutlined/>} />
+      <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
+
+     
 	  <Form.Item
         label="Phone"
         name="username" 
       >
-        <Input />
+ <Input   addonAfter={<EditOutlined/>} />
       </Form.Item>
  
  

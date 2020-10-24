@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const PersonalInfoWrapper = styled.div.attrs({
   className: "PersonalInfo-Wrapper"
 })`
-background: #c4c4c4; margin-bottom:30px;padding:20px;
+background: #c4c4c4; margin-bottom:30px;padding:20px;height: 345px;
   & .anticon {
     float:right;
   }

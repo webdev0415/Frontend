@@ -5,8 +5,7 @@ import {SettingOutlined
 
 import {
 	VendorInfoWrapper,
-	Title,
-	Text 
+	Title 
 } from "./styles"
 
 
