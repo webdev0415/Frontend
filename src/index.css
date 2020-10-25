@@ -162,12 +162,8 @@ code {
 .ant-modal-content{background: #c4c4c4;text-align:center; padding: 20px;}
 .ant-modal-content h5{margin-bottom:10px;}
 .ant-modal-footer{display:none;}
-.ant-modal-content .ant-input:hover {
-  border-color: #40a9ff;
-  border-right-width: 1px !important;
-  background: #2196F3;
-}.ant-modal-content .ant-input:focus {
-  border-color: #40a9ff;
-  border-right-width: 1px !important;
-  background: #2196F3;
+.ant-modal-content .ant-btn-block{margin-bottom: 15px;}
+ .ant-modal-content .ant-btn-block:focus {
+  border-color: #000;
+  border-right-width: 4px !important; 
 }

@@ -64,15 +64,12 @@ const PersonalInfo = () => {
         onOk={() => setVisible(false)}
         onCancel={() => setVisible(false)} 
       >  
-         <Title level={2}> Change Primary Address</Title>
-        <Form.Item  >
-          <Input />
-        </Form.Item> <br/>
-     
+         <Title level={2}> Change Primary Address</Title>     
+         <Button block>&nbsp;</Button>
+<br/>
         <Title level={2}> Add New Address</Title>
-        <Form.Item  >
-          <Input />
-        </Form.Item>    
+        <Button block>&nbsp;</Button>
+        <br/>
         <Button>Save Changes</Button>
 
       </Modal>
