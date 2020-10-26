@@ -7,7 +7,7 @@ export const InnerContainer = styled.div.attrs({
   className: "container"
 })`
 background: #fff;
-padding:40px;margin-top:40px;
+padding:40px;margin-top:10px;
 `
  
 export const ColContainer = styled.div.attrs({
@@ -19,7 +19,7 @@ export const Row = styled.div.attrs({
 })``;
  
 export const LayoutPageWrapper = styled.div.attrs({
-  className: "my-4"
+  className: ""
 })`
 	background:none;
      

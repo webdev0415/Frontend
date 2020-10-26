@@ -13,7 +13,7 @@ const LayoutPage = () => {
   return ( 
       <LayoutPageWrapper>
         <InnerContainer>
-        <Row>      
+     <Row>      
           <Col span={24}>
            <Profile />
           </Col>

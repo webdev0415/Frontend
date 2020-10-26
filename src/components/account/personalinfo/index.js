@@ -66,10 +66,10 @@ const PersonalInfo = () => {
       >  
          <Title level={2}> Change Primary Address</Title>     
          <Button block>&nbsp;</Button>
-<br/>
+ 
         <Title level={2}> Add New Address</Title>
         <Button block>&nbsp;</Button>
-        <br/>
+   
         <Button>Save Changes</Button>
 
       </Modal>
