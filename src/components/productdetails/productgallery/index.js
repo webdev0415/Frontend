@@ -10,7 +10,7 @@ const ProductGallery = () => {
   // const [tabIndex, setTabIndex] = React.useState('left')
   const details = useSelector(state=>state.products.productdetail)
   let image_gallery = []
-  if (details.length > 0) {
+  if (details!==undefined && details.length > 0) {
     image_gallery = [details[0].image,]
     details[0].colors.forEach(item=>{
       image_gallery.push(item.image)

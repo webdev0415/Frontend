@@ -1,8 +1,7 @@
-import React, { memo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import styled from 'styled-components/macro';
 import { Card, Typography } from 'antd';
+import { useHistory } from "react-router-dom";
 // import {checkEmail} from "../store/action"
 
 const CheckEmailView = () => {
@@ -10,9 +9,12 @@ const CheckEmailView = () => {
 
   // const dispatch = useDispatch();
   const { Title } = Typography;
-  // React.useEffect(()=>{
-  //   dispatch(checkEmail)
-  // }, [])
+  const history = useHistory()
+  React.useEffect(()=>{
+    setTimeout(() => { 
+        history.push('/login');
+       }, 5000)
+    }, [])
   return (
     <>
       

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {signupUser} from "../../../store/action"
-import {message} from 'antd'
 import { useHistory } from "react-router-dom";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -137,7 +136,7 @@ const SignUp = () => {
         <Button type="primary" htmlType="submit" className="login-form-button">
         Sign Up
         </Button> <Para>
-        By creating an account, you agree to our    <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+        By creating an account, you agree to our    <Link>Conditions of Use</Link> and <Link>Privacy Notice</Link>.
       </Para>
       <hr/> Already have an account? <Link to="/login">Sign In</Link>
       </Form.Item>

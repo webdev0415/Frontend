@@ -12,8 +12,14 @@ import RecentlyViewed from "../components/main/recently_viewed"
 import LatestBlog from "../components/main/latest_blog"
 import Footer from "../components/main/footer"
 import LiveChat from "../components/main/livechat"
+import {getAccountDetail} from "../store/action"
+import {useDispatch} from "react-redux"
 
 const MainPage = () => {
+	const dispatch = useDispatch()
+	  React.useEffect(()=>{
+	    dispatch(getAccountDetail())
+	  }, [])
 	return (
 		<MainPageWrapper>
 			<Logo />

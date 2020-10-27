@@ -2,18 +2,20 @@ import React from "react";
 import { Form, Input, Button, Checkbox } from 'antd'; 
 import {Link} from "react-router-dom"
 import logo from "./logo.PNG"
-import {useSelector, useDispatch} from "react-redux"
+import {useDispatch} from "react-redux"
 import {loginUser} from "../../../store/action"
 import {Title,
   Para,
   SigInWrapper
 } from "./styles";
+import {useHistory} from "react-router-dom"
 
 
 const SigIn = () => {
 
   const [loginParam, setLoginParam] = React.useState({})
   const dispatch = useDispatch()
+  const history = useHistory()
   const handleChange = e => {
     setLoginParam({
       ...loginParam,
@@ -21,7 +23,7 @@ const SigIn = () => {
     })
   }
   const onFinish = () => {
-    dispatch(loginUser(loginParam))
+    dispatch(loginUser(loginParam, history))
   }
   return (
 
@@ -71,17 +73,18 @@ const SigIn = () => {
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
-        <a className="login-form-forgot" href="">
+        <Link className="login-form-forgot">
           Forgot password
-        </a>
+        </Link>
       </Form.Item>
 
       <Form.Item>
         <Button type="primary" htmlType="submit" className="login-form-button">
         Sign In
         </Button> <Para>
-        By continuing, you agree to our    <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
-       <br/><hr/>New User <Link to="/signup">Sign Up</Link></Para>
+        By continuing, you agree to our    <Link>Conditions of Use</Link> and <Link>Privacy Notice</Link>.
+       <br/></Para>
+       <hr/>New User <Link to="/signup">Sign Up</Link>
       </Form.Item>
     </Form>
  

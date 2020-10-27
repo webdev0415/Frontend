@@ -33,12 +33,12 @@ const FeaturedProducts = () => {
       <Title>Just For You</Title>
       <Container>
       <InnerContainer>
-      { justforyou.length > 0 &&
+      { justforyou!==undefined && justforyou.length > 0 &&
         justforyou.filter((el, id)=> id < displayIndex)
-        .map((item, i)=><Link to="/product/detail"><ProductItem key={i} data={item} /></Link>)
+        .map((item, i)=><Link to="/product/detail" key={i}><ProductItem key={i} data={item} /></Link>)
       }
         {
-          justforyou.length > 0 &&
+          justforyou!==undefined && justforyou.length > 0 &&
           displayIndex < justforyou.length && 
           <ShowMoreButton onClick={handleClick}>
             <ClipLoader size={24} loading={loading} />

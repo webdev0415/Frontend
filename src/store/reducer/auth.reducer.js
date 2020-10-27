@@ -4,6 +4,7 @@ const isEmpty = require("is-empty");
 const initState = {
 	user: [],
 	isAuthenticated: false,
+	userprofile: [],
 }
 const blogsReducer = (state=initState, action) => {
 
@@ -13,6 +14,11 @@ const blogsReducer = (state=initState, action) => {
 	        	...state,
 	        	user: action.payload,
 	        	isAuthenticated: !isEmpty(action.payload)
+	        }
+	    case actionTypes.ACCOUNT_DETAIL:
+	        return {
+	        	...state,
+	        	userprofile: action.payload
 	        }
 		default:
 			return state

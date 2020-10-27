@@ -4,28 +4,36 @@ import Profile from "../profile";
 import PersonalInfo from "../personalinfo";
 import CompanyInfo from "../companyinfo";
 import VendorInfo from "../vendorinfo"
+import {useSelector, useDispatch} from "react-redux"
+import {getAccountDetail} from "../../../store/action"
+
 import { 
   LayoutPageWrapper, 
   InnerContainer
 } from "./styles";
 
 const LayoutPage = () => {
+  const dispatch = useDispatch()
+  React.useEffect(()=>{
+    dispatch(getAccountDetail())
+  }, [])
+
   return ( 
       <LayoutPageWrapper>
         <InnerContainer>
-     <Row>      
+        <Row>      
           <Col span={24}>
-           <Profile />
+            <Profile/>
           </Col>
           <Col span={8}>
-          <PersonalInfo />
+            <PersonalInfo />
           </Col>         
           <Col span={16}>
-          <CompanyInfo />
-            </Col>    
-            <Col span={24}>
+            <CompanyInfo/>
+          </Col>    
+          <Col span={24}>
             <VendorInfo />
-            </Col>    
+          </Col>    
         </Row>  
         </InnerContainer>  
       </LayoutPageWrapper>

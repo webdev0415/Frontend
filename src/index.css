@@ -159,11 +159,12 @@ code {
 #components-form-demo-normal-login .login-form-button {
   width: 100%;
 } 
-.ant-modal-content{background: #c4c4c4;text-align:center; padding: 20px;}
-.ant-modal-content h5{margin-bottom:10px;}
-.ant-modal-footer{display:none;}
-.ant-modal-content .ant-btn-block{margin-bottom: 15px;}
- .ant-modal-content .ant-btn-block:focus {
-  border-color: #000;
-  border-right-width: 4px !important; 
+.ant-upload.ant-upload-select-picture-card {
+  border-radius: 50%;
+}
+.ant-upload-list-picture-card .ant-upload-list-item {
+  border-radius: 50%;
+}
+.ant-upload-list-picture-card .ant-upload-list-item-info {
+  border-radius: 50%;
 }

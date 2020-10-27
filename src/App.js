@@ -5,10 +5,10 @@ import ProductPage from "./pages/productpage"
 import ProductDetailPage from "./pages/productdetailpage"
 import SignUpPage from "./pages/signup"
 import SignInPage from "./pages/signin"
-import AccountPage from "./pages/account"
 import EmailConfirmation from "./pages/emailconfirmation"
 import CheckEmailView from "./pages/checkemailview"
 import NotFoundPage from './components/notfoundpage';
+import AccountPage from "./pages/account"
 
 function App() {
   return (

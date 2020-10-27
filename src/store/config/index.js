@@ -3,7 +3,7 @@ const funcS = () => {
 		case 'production':
 			return ""
 		case 'development':
-			return "http://icarus.codes:8000/"
+			return "http://icarus.codes:8000"
 		default:
 			return ''
 	}

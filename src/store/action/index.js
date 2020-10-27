@@ -202,7 +202,7 @@ export const signupUser = (postData, history) => {
         });
     }
 }
-export const loginUser = loginData => {
+export const loginUser = (loginData, history) => {
     const formData = new URLSearchParams();
     formData.append("username", loginData.email);
     formData.append("password", loginData.password);
@@ -216,6 +216,7 @@ export const loginUser = loginData => {
             setAuthToken(res.data[0].access_token);
             const decoded = jwt_decode(res.data[0].access_token)
             dispatch(setCurrentUser(decoded))
+            history.push("/account")
         })
         .catch(err=>{
             message.error(err.message)
@@ -241,11 +242,25 @@ export const checkEmail = () => {
     .then(res=>{
         if (res.data.reply === "valid") {
             message.success("Valid Email")
-        } else if (res.data.reply == "invalid") {
+        } else if (res.data.reply === "invalid") {
             message.error("invalid Email")
         }
     })
     .catch(err=>{
         message.error(err.message)
     })
+}
+export const getAccountDetail = () => {
+    return dispatch => {
+        axios
+        .get(`${SERVER_PORT}/api/user/profile?email=kuro@jinglebells.com`)
+        .then( res => {
+            res.status === 200
+            ? dispatch({type: actionTypes.ACCOUNT_DETAIL, payload:res.data})
+            : Promise.reject(`Can"t communicate with REST API server (${res.statusText})`)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    } 
 }

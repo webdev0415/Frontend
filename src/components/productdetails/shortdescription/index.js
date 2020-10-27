@@ -35,13 +35,13 @@ const ShortDescription = () => {
             />
           </Col>
           <Col span={10}> 
-          {details.length > 0 && details[0].total_reviews} Customer Review
+          {details && details.length > 0 && details[0].total_reviews} Customer Review
           </Col>   
           <Col span={7}>  
-          {details.length > 0 && details[0].code}
+          {details && details.length > 0 && details[0].code}
           </Col>         
          </Row>             
-         <Title level={5}> {details.length > 0 && details[0].title}</Title>
+         <Title level={5}> {details && details.length > 0 && details[0].title}</Title>
          <Text type="success">In Stock</Text>
       </Shorttopinfo>
       <Shortcolor>
@@ -50,7 +50,7 @@ const ShortDescription = () => {
           <Col span={21}> 
             <Radio.Group onChange={onChange} defaultValue={0}>
               {
-                details.length > 0 && details[0].colors.map((el, index)=>
+                details && details.length > 0 && details[0].colors.map((el, index)=>
                   <Radio.Button value={index} key={index}>   
                     <Avatar src={el.image} />  
                   </Radio.Button>
@@ -66,7 +66,7 @@ const ShortDescription = () => {
           <Col span={21}> 
             <Radio.Group onChange={onChange} defaultValue={0}>
             {
-              details.length > 0 && details[0].sizes.map((el, index)=>
+              details && details.length > 0 && details[0].sizes.map((el, index)=>
                 <Radio.Button value={index} key={index}>{el.size}</Radio.Button>
                 )
             }
@@ -77,7 +77,7 @@ const ShortDescription = () => {
       <Shortprice>Price
         <Row>
         {
-          details.length > 0 && details[0].prices.map((el, index)=>
+          details && details.length > 0 && details[0].prices.map((el, index)=>
             <Col span={6} key={index}>{`${el.quantity[0]} - ${el.quantity[1]}`}<br />
               <Text strong>$ {el.price} </Text>
             </Col>
