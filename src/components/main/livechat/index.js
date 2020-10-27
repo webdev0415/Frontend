@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react';
 import { Widget, addResponseMessage } from 'react-chat-widget';
-
 import 'react-chat-widget/lib/styles.css';
 
 import logo from './logo192.png';
 import { 
-	Livechat
+  Livechat
 } from "./styles"
+
+const ws = new WebSocket("ws://icarus.codes:9001/");
+
+ws.onmessage = function(e) {
+  addResponseMessage(e.data);
+};
 
 function LiveChat() {
   useEffect(() => {
@@ -14,8 +19,7 @@ function LiveChat() {
   }, []);
 
   const handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
-    // Now send the message throught the backend API
+    ws.send(newMessage);
   };
 
     return (
