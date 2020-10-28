@@ -51,6 +51,10 @@ function LiveChat() {
 }
 
 const RoomList = ({ list, join }) => {
+  let index = list.findIndex(id => id == socket.id);
+  if(index !== -1){
+   list.splice(index, 1)
+  }
   return (
     <div
       className="card p-2"
