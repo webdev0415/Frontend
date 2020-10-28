@@ -7,7 +7,7 @@ import logo from "./logo192.png";
 import { Livechat } from "./styles";
 import { useState } from "react";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://immense-river-10142.herokuapp.com/");
 socket.on("message", (data) => addResponseMessage(data.message));
 
 function LiveChat() {
@@ -58,20 +58,26 @@ const RoomList = ({ list, join }) => {
         position: "fixed",
         right: "50px",
         bottom: "100px",
-        height: "250px",
-        width: "200px",
+        height: "350px",
+        width: "250px",
         overflowY: "auto",
       }}
     >
-      <h5>Users Listing</h5>
-      <ul className="list-group">
+      <h5 style={{color: '#0d97ff'}}>Users Listing</h5>
+      <ul className="list-group" style={{ border: 0 }}>
         {list &&
           list.map((room) => (
             <li
+              className="d-flex align-items-center px-2 py-1"
               key={room}
               onClick={() => join(room)}
-              className="list-group-item"
+              style={{
+                border: 0,
+                borderBottom: "1px solid #ccc",
+                wordBreak: 'break-word'
+              }}
             >
+              <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" className="mr-2"  width="30" height="30"/>
               {room}
             </li>
           ))}
